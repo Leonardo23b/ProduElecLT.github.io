@@ -174,8 +174,9 @@
     <!-- NAVEGACIÓN POR PESTAÑAS -->
     <nav>
         <button class="tab-btn active" onclick="switchTab('inicio')">Inicio</button>
-        <button class="tab-btn" onclick="switchTab('tareas')">Tareas</button>
-        <button class="tab-btn" onclick="switchTab('proyectos')">Proyectos Final</button>
+        <button class="tab-btn" onclick="switchTab('kicad')">KiCad</button>
+        <button class="tab-btn" onclick="switchTab('mods')">Mods</button>
+        <button class="tab-btn" onclick="switchTab('proyectos')">Proyecto Final</button>
         <button class="tab-btn" onclick="switchTab('acerca')">Acerca de nosotros</button>
     </nav>
 
@@ -184,42 +185,76 @@
 
         <!-- PESTAÑA: INICIO -->
         <section id="inicio" class="tab-content active">
-            <h2>Bienvenidos</h2>
-            <p style="margin-bottom: 1.5rem;">En esta página iré publicando todas las actividades, resúmenes y notas correspondientes al ciclo escolar.</p>
+            <h2>Introducción</h2>
+            <p style="margin-bottom: 1.5rem;">En esta página publicaremos acerca de nuestro progreso en la materia de producción electronica - por mejorar este resumen</p>
             
             <div class="card">
-                <span class="badge">Aviso</span>
-                <h3>Bienvenida al sitio web</h3>
-                <span class="date">Publicado el 12 de septiembre de 2026</span>
-                <p>¡Hola! He creado este espacio digital para organizar el material de la materia. Puedes navegar entre las pestañas superiores para ver mis publicaciones recopiladas.</p>
+                <span class="badge">Producción Electronica</span>
+                <h3>¿Que hacemos en producción electronica?</h3>
+                <p>En la materia de producción electronica ... bla bla bla más explicación</p>
             </div>
         </section>
 
-        <!-- PESTAÑA: TAREAS -->
-        <section id="tareas" class="tab-content">
+        <!-- PESTAÑA: KICAD -->
+        <section id="kicad" class="tab-content">
             <!-- Buscador para filtrar las publicaciones -->
             <div class="search-box">
-                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="🔍 Buscar publicaciones...">
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="🔍 Buscar ...">
             </div>
 
-            <!-- Tarea 1 -->
+            <!-- KiCad -->
             <article class="card searchable">
-                <span class="badge">Tarea 1</span>
-                <h3>Resumen: Introducción al Tema</h3>
-                <span class="date">Publicado el 10 de septiembre de 2026</span>
-                <p>Aquí puedes escribir el texto completo de tu tarea. También puedes incluir listas de puntos importantes o conclusiones a las que llegaste durante la clase.</p>
+                <span class="badge">KiCad</span>
+                <h3>Resumen: ¿Qué es KiCad?</h3>
+                <!-- imagen -->
+                <p>KiCad es un paquete de software de código abierto para la automatización del diseño electrónico (EDA). Los programas permiten la captura de esquemas y el diseño de placas de circuito impreso (PCB) con salida en formato Gerber e IPC-2581 . El paquete funciona en Windows, Linux y macOS y está licenciado bajo la licencia GNU GPL v3 .</p>
+                <span class="date">Fuente: https://www.kicad.org/about/kicad/</span>
             </article>
 
-            <!-- Tarea 2 -->
+            <!-- 2. -->
             <article class="card searchable">
-                <span class="badge">Tarea 2</span>
-                <h3>Análisis de Lectura y Conceptos</h3>
-                <span class="date">Publicado el 05 de septiembre de 2026</span>
-                <p>Escribe aquí las ideas principales de tus lecturas o actividades complementarias asignadas por tu profesor/a.</p>
+                <span class="badge">Menu</span>
+                <h3>Menu principal de KiCad</h3>
+                <!-- imagen -->
+                <p>Al iniciar un proyecto de KiCad podemos observar en la barra lateral...bla bla bla más texto</p>
             </article>
         </section>
 
-        <!-- PESTAÑA: PROYECTOS -->
+
+        
+
+ <!-- PESTAÑA: MODS -->
+        <section id="mods" class="tab-content">
+            <!-- Buscador para filtrar las publicaciones -->
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="🔍 Buscar ...">
+            </div>
+
+            <!-- pagina mods -->
+            <article class="card searchable">
+                <span class="badge">Mods</span>
+                <h3>Resumen: Pagina de Mods</h3>
+                <!-- imagen -->
+                <p>Mods CE (Community Edition) es un derivado del proyecto de investigación mods de CBA. Mods es una herramienta modular multiplataforma destinada a fablabs la cual se basa en módulos independientes pero interrelacionados. Potencialmente, mods puede utilizarse para CAD, CAM, control de maquinaria, automatización, creación de interfaces de usuario, lectura de dispositivos de entrada, interacción con modelos físicos y mucho más.  </p>
+                <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
+            </article>
+
+            <!-- Programa -->
+            <article class="card searchable">
+                <span class="badge">Programa</span>
+                <h3>Roland Monofab PCB</h3>
+                <!-- imagen -->
+                <p>Debido a que nosotros vamos a ocupar una Roland Monofab PCB SRM-20, en el menu lateral de Programs, nosotros buscamos este programa para empezar a calcular y exportar los archivos</p>
+            </article>
+        </section>
+
+
+
+
+
+
+        
+        <!-- PESTAÑA: PROYECTO -->
         <section id="proyectos" class="tab-content">
             <div class="card">
                 <span class="badge">Proyecto Final</span>
@@ -229,19 +264,31 @@
             </div>
         </section>
 
+
+
+        
         <!-- PESTAÑA: ACERCA DE -->
         <section id="acerca" class="tab-content">
             <div class="card">
                 <h3>Información del Estudiante</h3>
-                <p><strong>Nombre:</strong> Tu Nombre Completo</p>
-                <p><strong>Escuela:</strong> Nombre de tu Escuela/Instituto</p>
-                <p><strong>Grupo/Grado:</strong> Tu grupo</p>
-                <p><strong>Contacto:</strong> tuemail@ejemplo.com</p>
+                <p><strong>Nombre:</strong> Leonardo Barrientos Miguel</p>
+                <p><strong>Institucion:</strong> Estudiante de Ingenieria Mecatronica, Ibero Puebla</p>
+                <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
+                <p><strong>Contacto:</strong> 203586@iberopuebla.mx</p>
+            </div>
+
+                        <div class="card">
+                <h3>Información del Estudiante</h3>
+                <p><strong>Nombre:</strong> Tomas Toledo Fernandez</p>
+                <p><strong>Institucion:</strong> Estudiante de Ingenieria Mecatronica, Ibero Puebla</p>
+                <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
+                <p><strong>Contacto:</strong> 202945@iberopuebla.mx</p>
             </div>
         </section>
-
     </div>
 
+
+    
     <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
     <script>
         // Función para cambiar de pestaña
