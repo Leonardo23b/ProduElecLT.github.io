@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora Escolar</title>
+
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ESTILOS GENERALES Y DISEÑO --- */
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #7c3aed);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN (PESTAÑAS) --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* --- BUSCADOR --- */
+        .search-box {
+            margin-bottom: 1.5rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* --- SECCIONES Y PESTAÑAS --- */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- TARJETAS DE PUBLICACIÓN --- */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Portafolio & Bitácora Escolar</h1>
+        <p>Materia: Nombre de tu Materia | Alumno: Tu Nombre</p>
+    </header>
+
+    <!-- NAVEGACIÓN POR PESTAÑAS -->
+    <nav>
+        <button class="tab-btn active" onclick="switchTab('inicio')">Inicio</button>
+        <button class="tab-btn" onclick="switchTab('tareas')">Tareas</button>
+        <button class="tab-btn" onclick="switchTab('proyectos')">Proyectos</button>
+        <button class="tab-btn" onclick="switchTab('acerca')">Acerca de</button>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container">
+
+        <!-- PESTAÑA: INICIO -->
+        <section id="inicio" class="tab-content active">
+            <h2>Bienvenidos</h2>
+            <p style="margin-bottom: 1.5rem;">En esta página iré publicando todas las actividades, resúmenes y notas correspondientes al ciclo escolar.</p>
+            
+            <div class="card">
+                <span class="badge">Aviso</span>
+                <h3>Bienvenida al sitio web</h3>
+                <span class="date">Publicado el 12 de septiembre de 2026</span>
+                <p>¡Hola! He creado este espacio digital para organizar el material de la materia. Puedes navegar entre las pestañas superiores para ver mis publicaciones recopiladas.</p>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: TAREAS -->
+        <section id="tareas" class="tab-content">
+            <!-- Buscador para filtrar las publicaciones -->
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="🔍 Buscar publicaciones...">
+            </div>
+
+            <!-- Tarea 1 -->
+            <article class="card searchable">
+                <span class="badge">Tarea 1</span>
+                <h3>Resumen: Introducción al Tema</h3>
+                <span class="date">Publicado el 10 de septiembre de 2026</span>
+                <p>Aquí puedes escribir el texto completo de tu tarea. También puedes incluir listas de puntos importantes o conclusiones a las que llegaste durante la clase.</p>
+            </article>
+
+            <!-- Tarea 2 -->
+            <article class="card searchable">
+                <span class="badge">Tarea 2</span>
+                <h3>Análisis de Lectura y Conceptos</h3>
+                <span class="date">Publicado el 05 de septiembre de 2026</span>
+                <p>Escribe aquí las ideas principales de tus lecturas o actividades complementarias asignadas por tu profesor/a.</p>
+            </article>
+        </section>
+
+        <!-- PESTAÑA: PROYECTOS -->
+        <section id="proyectos" class="tab-content">
+            <div class="card">
+                <span class="badge">Proyecto Final</span>
+                <h3>Investigación Principal</h3>
+                <span class="date">En progreso</span>
+                <p>Espacio reservado para publicar los avances o la entrega final del proyecto escolar.</p>
+            </div>
+        </section>
+
+        <!-- PESTAÑA: ACERCA DE -->
+        <section id="acerca" class="tab-content">
+            <div class="card">
+                <h3>Información del Estudiante</h3>
+                <p><strong>Nombre:</strong> Tu Nombre Completo</p>
+                <p><strong>Escuela:</strong> Nombre de tu Escuela/Instituto</p>
+                <p><strong>Grupo/Grado:</strong> Tu grupo</p>
+                <p><strong>Contacto:</strong> tuemail@ejemplo.com</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
+    <script>
+        // Función para cambiar de pestaña
+        function switchTab(tabId) {
+            // Ocultar todas las pestañas
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Desactivar todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Mostrar la pestaña seleccionada y activar su botón
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Función para el buscador
+        function filterCards() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.searchable');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
