@@ -318,92 +318,98 @@
             <!-- Resumen Mods -->
             <article class="card searchable">
                 <span class="badge">Mods</span>
-                <h3>Resumen: Plataforma Mods CE</h3>
-                <p>Mods CE (Community Edition) es una herramienta modular desarrollada para entornos FabLab que opera directamente desde el navegador. Su arquitectura basada en nodos interconectados permite realizar procesos de CAD/CAM, generar trayectorias de fresado precisas y comunicarse con maquinaria de control numérico sin requerir la instalación previa de controladores complejos.</p>
+                <h3>Resumen: ¿Qué es Mods CE?</h3>
+                <p>Mods CE (Community Edition) es una herramienta web desarrollada para laboratorios de fabricación (FabLabs). Funciona mediante bloques interconectados y nos permite preparar proyectos de corte y grabado, calcular las rutas de las fresas y generar los archivos necesarios para máquinas CNC como la Roland SRM-20 sin complicaciones.</p>
                 <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
             </article>
 
             <!-- Paso 1 -->
             <article class="card searchable">
                 <span class="badge">Acceso</span>
-                <h3>Ingreso al entorno de trabajo</h3>
+                <h3>Entrada a la página de Mods</h3>
                 <img src="mods1.jpeg" alt="Entrada a la página de mods">
-                <p>El punto de partida consiste en ingresar al servidor web de Mods Community Edition desde el navegador para inicializar el entorno gráfico y cargar el lienzo base.</p>
+                <p>Para comenzar el proceso, abrimos el navegador e ingresamos a la página oficial de Mods Community Edition para cargar la zona de trabajo.</p>
             </article>
 
             <!-- Paso 2 -->
             <article class="card searchable">
                 <span class="badge">Menú</span>
-                <h3>Despliegue del gestor de programas</h3>
+                <h3>Menú de programas</h3>
                 <img src="mods2.jpeg" alt="Vista inicial de mods y menú Programs">
-                <p>Dentro del lienzo en blanco, se accede al menú superior para desplegar la biblioteca de procesos preconfigurados disponibles en la plataforma.</p>
+                <p>Una vez dentro de la pantalla principal, nos dirigimos a la pestaña superior para abrir la lista de configuraciones y programas disponibles en la plataforma.</p>
             </article>
 
             <!-- Paso 3 -->
             <article class="card searchable">
                 <span class="badge">Configuración</span>
-                <h3>Selección del perfil de la fresadora</h3>
+                <h3>Selección del programa para la fresadora</h3>
                 <img src="mods3.jpeg" alt="Buscador de programas SRM-20 mill 2D PCB">
-                <p>Mediante el filtro de búsqueda se localiza la plantilla específica para la fresadora Roland SRM-20 en modo de grabado y corte 2D para placas de circuito impreso.</p>
+                <p>En el buscador escribimos el modelo de la máquina y elegimos la opción de fresado 2D para PCB, que es la que se adapta a nuestra Roland monoFab.</p>
             </article>
 
             <!-- Paso 4 -->
             <article class="card searchable">
                 <span class="badge">Flujo de trabajo</span>
-                <h3>Diagrama modular de operaciones</h3>
+                <h3>Módulos de trabajo conectados</h3>
                 <img src="mods4.jpeg" alt="Pestañas y módulos activos para Roland Monofab PCB">
-                <p>La interfaz conecta en serie los módulos necesarios: desde la importación del diseño vectorial hasta el cálculo de la trayectoria y el archivo de salida para la máquina.</p>
+                <p>Al abrir el programa, la pantalla nos muestra un diagrama con varios bloques conectados en serie. Estos módulos nos guiarán paso a paso, desde importar el diseño hasta generar el archivo de corte.</p>
             </article>
 
             <!-- Paso 5 -->
             <article class="card searchable">
                 <span class="badge">Archivos</span>
-                <h3>Carga de la capa de corte (Edge Cuts)</h3>
+                <h3>Cargar el archivo de contorno</h3>
                 <img src="mods5.jpeg" alt="Seleccionar archivo SVG de Edge Cuts">
-                <p>Se importa el archivo vectorial en formato SVG exportado previamente desde KiCad, el cual define el contorno perimetral y la silueta exterior de la PCB.</p>
+                <p>Buscamos y seleccionamos el archivo SVG con el contorno de nuestra placa (Edge Cuts), el cual exportamos previamente desde KiCad para definir la forma exterior.</p>
             </article>
 
             <!-- Paso 6 -->
             <article class="card searchable">
                 <span class="badge">Herramienta</span>
-                <h3>Asignación de la fresa</h3>
+                <h3>Elección de la fresa</h3>
                 <img src="mods6.jpeg" alt="Selección de corte y tamaño de fresa">
-                <p>Se establece el perfil de corte adecuado cargando los valores predeterminados para la fresa plana, asegurando que el diámetro de la herramienta coincida con el diámetro real a utilizar en el mandril.</p>
+                <p>Elegimos la medida de broca que más se acerque a la que vamos a usar en la máquina física, dejando los parámetros base listos para ajustarse.</p>
             </article>
 
             <!-- Paso 7 -->
             <article class="card searchable">
                 <span class="badge">Parámetros</span>
-                <h3>Definición de coordenadas y velocidades</h3>
+                <h3>Ajuste de medidas y velocidad</h3>
                 <img src="mods7.jpeg" alt="Parámetros de corte y velocidad">
-                <p>Se configuran las variables operativas críticas: el diámetro final de la herramienta, la cantidad de compensaciones o pasadas laterales, el origen de coordenadas relativo y la velocidad de avance de trabajo.</p>
+                <p>Configuramos los datos clave para el corte exterior: ingresamos el grosor real de la punta, cuántas pasadas dará la máquina, el punto de inicio (origen cero) y la velocidad de desplazamiento.</p>
             </article>
 
-            <!-- Paso 8 -->
+            <!-- Paso 8 (mods9) -->
             <article class="card searchable">
                 <span class="badge">Cálculo</span>
-                <h3>Generación del código y cálculo de tiempo</h3>
+                <h3>Calcular trayectorias y tiempo</h3>
                 <img src="mods9.jpeg" alt="Botón calculate y tiempo estimado">
-                <p>Se ejecuta el algoritmo de cálculo numérico para trazar las rutas exactas que seguirá el cortador, obteniendo una estimación precisa de la duración total del maquinado y descargando el archivo listo para enviar a la máquina.</p>
+                <p>Damos clic en el botón de calcular para que el programa trace el recorrido de la fresa y nos muestre el tiempo total que tardará la máquina en terminar el trabajo.</p>
             </article>
 
-            <!-- Paso 9 -->
+            <!-- Paso 9 (mods11) -->
             <article class="card searchable">
-                <span class="badge">Verificación</span>
-                <h3>Renderizado y comprobación visual</h3>
-                <img src="mods10.jpeg" alt="Vista previa 3D de la simulación del corte">
-                <p>Se analiza la vista previa tridimensional del desbaste para certificar que el borde exterior se aísle completamente sin colisiones ni desgastes no deseados en la placa de cobre.</p>
+                <span class="badge">Trayectoria</span>
+                <h3>Revisión de las pasadas de corte</h3>
+                <img src="mods11.jpeg" alt="Trazo de compensación y pasadas de corte">
+                <p>Se abrirá una vista de líneas donde podemos comprobar cómo se moverá la fresa paso a paso alrededor de la figura para no dañar el circuito[cite: 12].</p>
             </article>
-        </section>
-        
-        <!-- PESTAÑA: PROYECTO -->
-        <section id="proyectos" class="tab-content">
-            <div class="card">
-                <span class="badge">Proyecto Final</span>
-                <h3>Investigación Principal</h3>
-                <span class="date">En progreso</span>
-                <p>Espacio reservado para publicar los avances o la entrega final del proyecto escolar.</p>
-            </div>
+
+            <!-- Paso 10 (mods13) -->
+            <article class="card searchable">
+                <span class="badge">Descarga</span>
+                <h3>Obtener el archivo para la monoFab</h3>
+                <img src="mods13.jpeg" alt="Módulo save file y descarga para Roland">
+                <p>Ubicamos el bloque de guardado y descargamos el archivo final (.rml), el cual cargaremos directamente en el programa que controla la fresadora[cite: 13].</p>
+            </article>
+
+            <!-- Paso 11 (mods10) -->
+            <article class="card searchable">
+                <span class="badge">Resultado</span>
+                <h3>Simulación visual en 3D</h3>
+                <img src="mods10.jpeg" alt="Vista previa 3D de la simulación del corte">
+                <p>Finalmente, podemos revisar la simulación en 3D para confirmar que la pieza queda totalmente recortada y con la forma deseada antes de enviarla a fabricar[cite: 10].</p>
+            </article>
         </section>
 
         <!-- PESTAÑA: ACERCA DE -->
