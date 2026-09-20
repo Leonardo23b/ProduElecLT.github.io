@@ -318,81 +318,81 @@
             <!-- Resumen Mods -->
             <article class="card searchable">
                 <span class="badge">Mods</span>
-                <h3>Resumen: Pagina de Mods</h3>
-                <p>Mods CE (Community Edition) es un derivado del proyecto de investigación mods de CBA. Mods es una herramienta modular multiplataforma destinada a fablabs la cual se basa en módulos independientes pero interrelacionados. Potencialmente, mods puede utilizarse para CAD, CAM, control de maquinaria, automatización, creación de interfaces de usuario, lectura de dispositivos de entrada, interacción con modelos físicos y mucho más.</p>
+                <h3>Resumen: Plataforma Mods CE</h3>
+                <p>Mods CE (Community Edition) es una herramienta modular desarrollada para entornos FabLab que opera directamente desde el navegador. Su arquitectura basada en nodos interconectados permite realizar procesos de CAD/CAM, generar trayectorias de fresado precisas y comunicarse con maquinaria de control numérico sin requerir la instalación previa de controladores complejos.</p>
                 <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
             </article>
 
             <!-- Paso 1 -->
             <article class="card searchable">
                 <span class="badge">Acceso</span>
-                <h3>Acceso a la herramienta de Mods</h3>
+                <h3>Ingreso al entorno de trabajo</h3>
                 <img src="mods1.jpeg" alt="Entrada a la página de mods">
-                <p>Entrando a esta página accedemos a la herramienta de mods.</p>
+                <p>El punto de partida consiste en ingresar al servidor web de Mods Community Edition desde el navegador para inicializar el entorno gráfico y cargar el lienzo base.</p>
             </article>
 
             <!-- Paso 2 -->
             <article class="card searchable">
                 <span class="badge">Menú</span>
-                <h3>Página principal de Mods</h3>
+                <h3>Despliegue del gestor de programas</h3>
                 <img src="mods2.jpeg" alt="Vista inicial de mods y menú Programs">
-                <p>Así se ve la página de mods. En esta pestaña abrimos el menú de programs.</p>
+                <p>Dentro del lienzo en blanco, se accede al menú superior para desplegar la biblioteca de procesos preconfigurados disponibles en la plataforma.</p>
             </article>
 
             <!-- Paso 3 -->
             <article class="card searchable">
-                <span class="badge">Programa</span>
-                <h3>Búsqueda de SRM-20 mill</h3>
+                <span class="badge">Configuración</span>
+                <h3>Selección del perfil de la fresadora</h3>
                 <img src="mods3.jpeg" alt="Buscador de programas SRM-20 mill 2D PCB">
-                <p>En el buscador buscamos la sección de SRM-20 mill. Aquí seleccionamos mill 2D PCB, que es la herramienta que utilizaremos para trabajar en la monoFab.</p>
+                <p>Mediante el filtro de búsqueda se localiza la plantilla específica para la fresadora Roland SRM-20 en modo de grabado y corte 2D para placas de circuito impreso.</p>
             </article>
 
             <!-- Paso 4 -->
             <article class="card searchable">
                 <span class="badge">Flujo de trabajo</span>
-                <h3>Pestañas de trabajo en Mods</h3>
+                <h3>Diagrama modular de operaciones</h3>
                 <img src="mods4.jpeg" alt="Pestañas y módulos activos para Roland Monofab PCB">
-                <p>Aquí vamos a seleccionar el elemento con el que vamos a trabajar; estas pestañas son las que vamos a estar utilizando.</p>
+                <p>La interfaz conecta en serie los módulos necesarios: desde la importación del diseño vectorial hasta el cálculo de la trayectoria y el archivo de salida para la máquina.</p>
             </article>
 
             <!-- Paso 5 -->
             <article class="card searchable">
-                <span class="badge">Cargar archivo</span>
-                <h3>Selección del archivo de corte</h3>
+                <span class="badge">Archivos</span>
+                <h3>Carga de la capa de corte (Edge Cuts)</h3>
                 <img src="mods5.jpeg" alt="Seleccionar archivo SVG de Edge Cuts">
-                <p>Seleccionamos el archivo que vamos a utilizar.</p>
+                <p>Se importa el archivo vectorial en formato SVG exportado previamente desde KiCad, el cual define el contorno perimetral y la silueta exterior de la PCB.</p>
             </article>
 
             <!-- Paso 6 -->
             <article class="card searchable">
                 <span class="badge">Herramienta</span>
-                <h3>Selección de la fresa</h3>
+                <h3>Asignación de la fresa</h3>
                 <img src="mods6.jpeg" alt="Selección de corte y tamaño de fresa">
-                <p>Seleccionamos la punta de 1.59, que es la más cercana a nuestra punta de 2mm.</p>
+                <p>Se establece el perfil de corte adecuado cargando los valores predeterminados para la fresa plana, asegurando que el diámetro de la herramienta coincida con el diámetro real a utilizar en el mandril.</p>
             </article>
 
             <!-- Paso 7 -->
             <article class="card searchable">
-                <span class="badge">Configuración</span>
-                <h3>Parámetros para la periferia</h3>
+                <span class="badge">Parámetros</span>
+                <h3>Definición de coordenadas y velocidades</h3>
                 <img src="mods7.jpeg" alt="Parámetros de corte y velocidad">
-                <p>Vamos a utilizar los siguientes parámetros para la periferia: 1.99 como la medida de nuestra punta, número de pasadas que va a dar la monoFab, el punto cero que va a utilizar la máquina y 4 como la velocidad a la que dará las pasadas.</p>
+                <p>Se configuran las variables operativas críticas: el diámetro final de la herramienta, la cantidad de compensaciones o pasadas laterales, el origen de coordenadas relativo y la velocidad de avance de trabajo.</p>
             </article>
 
             <!-- Paso 8 -->
             <article class="card searchable">
                 <span class="badge">Cálculo</span>
-                <h3>Calcular tiempo y simulación</h3>
+                <h3>Generación del código y cálculo de tiempo</h3>
                 <img src="mods9.jpeg" alt="Botón calculate y tiempo estimado">
-                <p>Aquí presionamos para calcular el tiempo y tener una simulación de lo que va a hacer la monoFab, así como la velocidad y el tiempo estimado que tardará en terminar las pasadas.</p>
+                <p>Se ejecuta el algoritmo de cálculo numérico para trazar las rutas exactas que seguirá el cortador, obteniendo una estimación precisa de la duración total del maquinado y descargando el archivo listo para enviar a la máquina.</p>
             </article>
 
             <!-- Paso 9 -->
             <article class="card searchable">
-                <span class="badge">Resultado</span>
-                <h3>Simulación del corte</h3>
+                <span class="badge">Verificación</span>
+                <h3>Renderizado y comprobación visual</h3>
                 <img src="mods10.jpeg" alt="Vista previa 3D de la simulación del corte">
-                <p>Simulación del corte.</p>
+                <p>Se analiza la vista previa tridimensional del desbaste para certificar que el borde exterior se aísle completamente sin colisiones ni desgastes no deseados en la placa de cobre.</p>
             </article>
         </section>
         
@@ -419,8 +419,8 @@
 
             <div class="card">
                 <h3>Información del Estudiante</h3>
-                <!-- Si tu archivo en GitHub se llama Tommy.jpg déjalo así; si tiene el nombre largo de WhatsApp, añade .jpg al final -->
-                <img src="Tommy.jpg" alt="Tomas">
+                <!-- Nueva foto de Tommy en traje -->
+                <img src="tommy_foto.jpeg" alt="Tomas">
                 <p><strong>Nombre:</strong> Tomas Toledo Fernandez</p>
                 <p><strong>Estudiante de:</strong> Ingenieria Mecatronica, Ibero Puebla</p>
                 <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
