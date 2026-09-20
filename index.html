@@ -161,6 +161,14 @@
             font-weight: 600;
             margin-bottom: 0.8rem;
         }
+
+        .card img {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
@@ -191,211 +199,202 @@
             <div class="card">
                 <span class="badge">Producción Electronica</span>
                 <h3>¿Que hacemos en producción electronica?</h3>
-                 <img src="ImagenPlaca.jpg" alt="Foto de placa" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                <p>La materia de producción electronica es una materia enfocada en diseñar y fabricar componentes electronicos desde cero, desde el planteamiento del proyecto hasta la fabricación de placas. Aqui abarcamos desde la elaboración de esquematicos y el diseño de placas en software como KiCad o Altium, hasta el uso de herramientas y software especializado  para el corte, soldado y ensamblaje de dichas placas.</p>
+                <img src="ImagenPlaca.jpg" alt="Foto de placa">
+                <p>La materia de producción electronica es una materia enfocada en diseñar y fabricar componentes electronicos desde cero, desde el planteamiento del proyecto hasta la fabricación de placas. Aqui abarcamos desde la elaboración de esquematicos y el diseño de placas en software como KiCad o Altium, hasta el uso de herramientas y software especializado para el corte, soldado y ensamblaje de dichas placas.</p>
             </div>
         </section>
 
         <!-- PESTAÑA: KICAD -->
         <section id="kicad" class="tab-content">
-            <!-- Buscador para filtrar las publicaciones -->
             <div class="search-box">
-                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="🔍 Buscar ...">
+                <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en KiCad...">
             </div>
 
-            <!-- KiCad -->
+            <!-- KiCad Resumen -->
             <article class="card searchable">
                 <span class="badge">KiCad</span>
                 <h3>Resumen: ¿Qué es KiCad?</h3>
-                <img src="logokicad.webp" alt="Logo de KiCad" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
+                <img src="logokicad.webp" alt="Logo de KiCad">
                 <p>KiCad es un paquete de software de código abierto para la automatización del diseño electrónico (EDA). Los programas permiten la captura de esquemas y el diseño de placas de circuito impreso (PCB) con salida en formato Gerber e IPC-2581 . El paquete funciona en Windows, Linux y macOS y está licenciado bajo la licencia GNU GPL v3 .</p>
                 <span class="date">Fuente: https://www.kicad.org/about/kicad/</span>
             </article>
 
-            <!-- 2. -->
+            <!-- 2. Menú principal -->
             <article class="card searchable">
                 <span class="badge">Menu</span>
                 <h3>Menu principal de KiCad</h3>
                 <p>Al iniciar un proyecto de KiCad podemos observar en la barra lateral de KiCad los editores que tenemos disponibles, como lo es el editor de esquemas, el editor de simbolos o el editor de placas.</p>
-                <img src="Imagen1.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
+                <img src="Imagen1.png" alt="Imagen">
                 <p>Además de eso tambien encontramos los menus usuales de "Archivo" donde podemos encontrar para abrir, guardar o clonar algun documento que tengamos; "Editar"para copiar, pegar o cortar; o "Herramientas" entre otras; como es usual encontrar en cualquier aplicación con creación de archivos.</p>
             </article>
 
-            <!-- 3. -->
+            <!-- 3. Librería -->
             <article class="card searchable">
                 <span class="badge">KidCad FabLib</span>
                 <h3>¿Cómo instalar KidCad FabLib?</h3>
-                <img src="Imagen2.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
+                <img src="Imagen2.png" alt="Imagen">
                 <p>Abrimos el menu de Herramientas buscando el "Administrador de Complementos y Contenido" y lo abrimos, lo cual nos abrira un menu.</p>
-                <img src="Imagen3.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
+                <img src="Imagen3.png" alt="Imagen">
                 <p>En dicho menu vamos a buscar en el filtro la libreria de "KidCd FabLib" y la instalamos. Una vez instalada vamos a reiniciar el programa para asegurarnos de poder utilizar esta libreria.</p>
             </article>
 
-            <!-- 4. -->
-                <article class="card searchable">
-                    <span class="badge">Esquemas</span>
-                    <h3>Editor de esquemas</h3>
-                    <p>Lo primero que vamos a ocupar es el editor de esquemas el cual podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior.</p>
-                    <img src="Imagen4.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Una vez abierto nos desplegara la ventana de la anterior imagen, en donde podremos crear, editar y conectar todos nuestros diagramas para realizar un circuito.</p>
-                </article>
+            <!-- 4. Editor de esquemas -->
+            <article class="card searchable">
+                <span class="badge">Esquemas</span>
+                <h3>Editor de esquemas</h3>
+                <p>Lo primero que vamos a ocupar es el editor de esquemas el cual podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior.</p>
+                <img src="Imagen4.png" alt="Imagen">
+                <p>Una vez abierto nos desplegara la ventana de la anterior imagen, en donde podremos crear, editar y conectar todos nuestros diagramas para realizar un circuito.</p>
+            </article>
         
-            <!-- 5. -->
-                <article class="card searchable">
-                    <span class="badge">HerramientasE</span>
-                    <h3>Herramientas del editor de esquemas</h3>
-                    <img src="Imagen5.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>En la barra lateral dentro del editor de esquemás podemos observar diversas herramientas las cuales nos pueden ayudar a identificar e insertar los elementos necesarios para nuestro diagrama</p>
-                </article>
+            <!-- 5. Herramientas de esquemas -->
+            <article class="card searchable">
+                <span class="badge">HerramientasE</span>
+                <h3>Herramientas del editor de esquemas</h3>
+                <img src="Imagen5.png" alt="Imagen">
+                <p>En la barra lateral dentro del editor de esquemás podemos observar diversas herramientas las cuales nos pueden ayudar a identificar e insertar los elementos necesarios para nuestro diagrama</p>
+            </article>
         
-            <!-- 6. -->
-                <article class="card searchable">
-                    <span class="badge">Componentes</span>
-                    <h3>¿Cómo agregar un componente?</h3>
-                    <p>La parte más importante del editor de esquemas es para poder agregar los componentes que deseamos utilizar. Esto lo podemos hacer de dos maneras, utilizando el comando de la tecla "A" o pulsando el icono de "Colocar Simbolos" que vimos en la barra lateral del editor de esquemas en la parte anterior. Esto nos abrira la siguiente ventana:</p>
-                    <img src="Imagen6.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Una vez abierta esta ventana desde el filtro podremos buscar cualquier componente que deseemos insertar simplemente escribiendolo. Tambien es importante que busquemos insertar los componentes de nuestra libreria que insertamos llamada "PCM_fab"</p>
-                    <img src="Imagen7.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p> Tambien es importante que verifiquemos que el compomnente que deseemos insertar tenga un footprint ya determiando, debido a que es  probable que no podamos encontrar facilmente los componentes que no posean un footprint, es lo que se ve a continuación.</p>
-                    <img src="Imagen8.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                </article>
+            <!-- 6. Componentes -->
+            <article class="card searchable">
+                <span class="badge">Componentes</span>
+                <h3>¿Cómo agregar un componente?</h3>
+                <p>La parte más importante del editor de esquemas es para poder agregar los componentes que deseamos utilizar. Esto lo podemos hacer de dos maneras, utilizando el comando de la tecla "A" o pulsando el icono de "Colocar Simbolos" que vimos en la barra lateral del editor de esquemas en la parte anterior. Esto nos abrira la siguiente ventana:</p>
+                <img src="Imagen6.png" alt="Imagen">
+                <p>Una vez abierta esta ventana desde el filtro podremos buscar cualquier componente que deseemos insertar simplemente escribiendolo. Tambien es importante que busquemos insertar los componentes de nuestra libreria que insertamos llamada "PCM_fab"</p>
+                <img src="Imagen7.png" alt="Imagen">
+                <p>Tambien es importante que verifiquemos que el compomnente que deseemos insertar tenga un footprint ya determiando, debido a que es probable que no podamos encontrar facilmente los componentes que no posean un footprint, es lo que se ve a continuación.</p>
+                <img src="Imagen8.png" alt="Imagen">
+            </article>
         
-            <!-- 7. -->
-                <article class="card searchable">
-                    <span class="badge">Placas</span>
-                    <h3>Editor de Placas</h3>
-                    <img src="Imagen9.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Por otro lado tenemos tambien el editor de placas el cual, al igual que el editor de esquemas, podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior, pero a su vez tambien podemos ingresar desde el editor de esquemas al pulsar el icono señalado en la siguiente imamgen.</p>
-                </article>
+            <!-- 7. Editor de placas -->
+            <article class="card searchable">
+                <span class="badge">Placas</span>
+                <h3>Editor de Placas</h3>
+                <img src="Imagen9.png" alt="Imagen">
+                <p>Por otro lado tenemos tambien el editor de placas el cual, al igual que el editor de esquemas, podemos abrir desde el menu lateral en el inicio o en la barra de Herramientas en la parte superior, pero a su vez tambien podemos ingresar desde el editor de esquemas al pulsar el icono señalado en la siguiente imamgen.</p>
+            </article>
         
-            <!-- 8. -->
-                <article class="card searchable">
-                    <span class="badge">Componentes</span>
-                    <h3>¿Cómo importar los componentes del editor de esquemas?</h3>
-                    <img src="Imagen10.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Al ya tener abierta la pestaña del editor de placas vamos a necesitar insertar los componentes del diagrama que ya creamos con anterioridad. Para esto vamos a buscar el icono de "Actualizar placa desde esquema" el cual nos va a abrir otra ventanita en la cual vamos a picar el boton de "Actualizar placa", con lo que ya tendriamos nuestros componentes inserador en esta"</p>
-                </article>
+            <!-- 8. Importar componentes -->
+            <article class="card searchable">
+                <span class="badge">Componentes</span>
+                <h3>¿Cómo importar los componentes del editor de esquemas?</h3>
+                <img src="Imagen10.png" alt="Imagen">
+                <p>Al ya tener abierta la pestaña del editor de placas vamos a necesitar insertar los componentes del diagrama que ya creamos con anterioridad. Para esto vamos a buscar el icono de "Actualizar placa desde esquema" el cual nos va a abrir otra ventanita en la cual vamos a picar el boton de "Actualizar placa", con lo que ya tendriamos nuestros componentes inserador en esta"</p>
+            </article>
         
-            <!-- 9. -->
-                <article class="card searchable">
-                    <span class="badge">HerramientasP</span>
-                    <h3>Herramientas del editor de placas</h3>
-                    <p>Una vez que tengamos nuestros componentes en el editor de placas nos vamos a encontrar en la barra lateral derecha diversas herramientas para poder diseñar nuestra placa a nuestro gusto.</p>
-                    <img src="Imagen11.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Pero tambien es importante que dependiendo de nos requisitos y limitaciones que tengamos ajustemos las reglas de diseño. Parra poder ajustar estar reglas vamos a pulsar un pequeño menu desplegable en la parte superior izquierda para despues de eso pulsar el apartado de "Editar tamaños predefinidos" lo cual nos abrira una ventana en la cual buscaremos "Requerimientos" para poder ajustar como es debido las limitaciones que poseamos.</p>
-                    <img src="Imagen12.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Una vez que hayamos avanzado o en su defecto concluido con nuestro diseño de placa, debemos comprobar que nuestro diseño cumpla con las reglas de diseño. Esto lo haremos desde el apartado de de "Comprobar Reglas de diseño" y posterior mente ejecutando el DRC con lo que se nos indicara si tenemos algun incumplimiento de las reglas mediante errores o avisos.</p>
-                    <img src="Imagen13.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                </article>
-
-            <!-- 10. -->
-                <article class="card searchable">
-                    <span class="badge">Exportar</span>
-                    <h3>¿Cómo exportar los archivos a gerber?</h3>
-                    <p>Una vez que nuestro diseño este terminado y no posea ningun error o aviso, lo que queremos es exportar los archivos para poder empezar a fabricar. Esto lo haremos desde "Archivo" y buscando "Salidas de fabricación" se nos desplegara las opciones posibles que tenemos.</p>
-                    <img src="Imagen14.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>En nuestro caso pulsaremos la opción de "Gerbers" lo cual nos abrira la siguiente ventana. Y en la parte de "Formato de trazado" cambiaremos el formato a un archivo "SVG" lo cual nos cambiara el menu (Al de la segunda imagen).</p>
-                    <img src="Imagen15.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <img src="Imagen16.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                    <p>Ya en esta ventana dejaremos incluidas solamente las capas que nosotros ocupamos e incluiremos el apartado de "Ajustar pagina a la placa" para posteriormente pulsar "Trazar" lo cual nos creara los archivos para poder posteriormente configurar nuestros archivos de fabricación. NOTA: si no somos nosotros mismos los que vamos a fabricar las placas, es importante en esa misma ventana pulsar "Guardar" para poder crear un reporte el cual indicara cosas como los componentes, donde va cada uno etc.</p>
-                    <img src="Imagen17.png" alt="Imagen" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
-                </article>
-            </section>
-
-
-
-        
-
-<!-- ================= SECCIÓN MODS ================= -->
-        <section>
-            <div>
-                <!-- Encabezado de sección -->
-            </div>
-
-            <!-- Resumen Mods -->
-            <article>
-                <span>Mods</span>
-                <h3>Resumen: Pagina de Mods</h3>
-                <p style="margin-top: 15px; margin-bottom: 15px;">Mods CE (Community Edition) es un derivado del proyecto de investigación mods de CBA. Mods es una herramienta modular multiplataforma destinada a fablabs la cual se basa en módulos independientes pero interrelacionados. Potencialmente, mods puede utilizarse para CAD, CAM, control de maquinaria, automatización, creación de interfaces de usuario, lectura de dispositivos de entrada, interacción con modelos físicos y mucho más.</p>
-                <span>Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
+            <!-- 9. Herramientas de placas -->
+            <article class="card searchable">
+                <span class="badge">HerramientasP</span>
+                <h3>Herramientas del editor de placas</h3>
+                <p>Una vez que tengamos nuestros componentes en el editor de placas nos vamos a encontrar en la barra lateral derecha diversas herramientas para poder diseñar nuestra placa a nuestro gusto.</p>
+                <img src="Imagen11.png" alt="Imagen">
+                <p>Pero tambien es importante que dependiendo de nos requisitos y limitaciones que tengamos ajustemos las reglas de diseño. Parra poder ajustar estar reglas vamos a pulsar un pequeño menu desplegable en la parte superior izquierda para despues de eso pulsar el apartado de "Editar tamaños predefinidos" lo cual nos abrira una ventana en la cual buscaremos "Requerimientos" para poder ajustar como es debido las limitaciones que poseamos.</p>
+                <img src="Imagen12.png" alt="Imagen">
+                <p>Una vez que hayamos avanzado o en su defecto concluido con nuestro diseño de placa, debemos comprobar que nuestro diseño cumpla con las reglas de diseño. Esto lo haremos desde el apartado de de "Comprobar Reglas de diseño" y posterior mente ejecutando el DRC con lo que se nos indicara si tenemos algun incumplimiento de las reglas mediante errores o avisos.</p>
+                <img src="Imagen13.png" alt="Imagen">
             </article>
 
-            <!-- Paso 1 -->
-            <article>
-                <span>Acceso</span>
-                <h3>Acceso a la herramienta de Mods</h3>
-                <img alt="Entrada a la página de mods" src="mods1.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Entrando a esta página accedemos a la herramienta de mods.</p>
-            </article>
-
-            <!-- Paso 2 -->
-            <article>
-                <span>Menú</span>
-                <h3>Página principal de Mods</h3>
-                <img alt="Vista inicial de mods y menú Programs" src="mods2.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Así se ve la página de mods. En esta pestaña abrimos el menú de programs.</p>
-            </article>
-
-            <!-- Paso 3 -->
-            <article>
-                <span>Programa</span>
-                <h3>Búsqueda de SRM-20 mill</h3>
-                <img alt="Buscador de programas SRM-20 mill 2D PCB" src="mods3.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">En el buscador buscamos la sección de SRM-20 mill. Aquí seleccionamos mill 2D PCB, que es la herramienta que utilizaremos para trabajar en la monoFab.</p>
-            </article>
-
-            <!-- Paso 4 -->
-            <article>
-                <span>Flujo de trabajo</span>
-                <h3>Pestañas de trabajo en Mods</h3>
-                <img alt="Pestañas y módulos activos para Roland Monofab PCB" src="mods4.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Aquí vamos a seleccionar el elemento con el que vamos a trabajar; estas pestañas son las que vamos a estar utilizando.</p>
-            </article>
-
-            <!-- Paso 5 -->
-            <article>
-                <span>Cargar archivo</span>
-                <h3>Selección del archivo de corte</h3>
-                <img alt="Seleccionar archivo SVG de Edge Cuts" src="mods5.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Seleccionamos el archivo que vamos a utilizar.</p>
-            </article>
-
-            <!-- Paso 6 -->
-            <article>
-                <span>Herramienta</span>
-                <h3>Selección de la fresa</h3>
-                <img alt="Selección de corte y tamaño de fresa" src="mods6.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Seleccionamos la punta de 1.59, que es la más cercana a nuestra punta de 2mm.</p>
-            </article>
-
-            <!-- Paso 7 -->
-            <article>
-                <span>Configuración</span>
-                <h3>Parámetros para la periferia</h3>
-                <img alt="Parámetros de corte y velocidad" src="mods7.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Vamos a utilizar los siguientes parámetros para la periferia: 1.99 como la medida de nuestra punta, número de pasadas que va a dar la monoFab, el punto cero que va a utilizar la máquina y 4 como la velocidad a la que dará las pasadas.</p>
-            </article>
-
-            <!-- Paso 8 -->
-            <article>
-                <span>Cálculo</span>
-                <h3>Calcular tiempo y simulación</h3>
-                <img alt="Botón calculate y tiempo estimado" src="mods9.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Aquí presionamos para calcular el tiempo y tener una simulación de lo que va a hacer la monoFab, así como la velocidad y el tiempo estimado que tardará en terminar las pasadas.</p>
-            </article>
-
-            <!-- Paso 9 -->
-            <article>
-                <span>Resultado</span>
-                <h3>Simulación del corte</h3>
-                <img alt="Vista previa 3D de la simulación del corte" src="mods10.jpeg" style="display: block; margin: 18px 0; max-width: 100%;">
-                <p style="margin-top: 15px; margin-bottom: 15px;">Simulación del corte.</p>
+            <!-- 10. Exportar -->
+            <article class="card searchable">
+                <span class="badge">Exportar</span>
+                <h3>¿Cómo exportar los archivos a gerber?</h3>
+                <p>Una vez que nuestro diseño este terminado y no posea ningun error o aviso, lo que queremos es exportar los archivos para poder empezar a fabricar. Esto lo haremos desde "Archivo" y buscando "Salidas de fabricación" se nos desplegara las opciones posibles que tenemos.</p>
+                <img src="Imagen14.png" alt="Imagen">
+                <p>En nuestro caso pulsaremos la opción de "Gerbers" lo cual nos abrira la siguiente ventana. Y en la parte de "Formato de trazado" cambiaremos el formato a un archivo "SVG" lo cual nos cambiara el menu (Al de la segunda imagen).</p>
+                <img src="Imagen15.png" alt="Imagen">
+                <img src="Imagen16.png" alt="Imagen">
+                <p>Ya en esta ventana dejaremos incluidas solamente las capas que nosotros ocupamos e incluiremos el apartado de "Ajustar pagina a la placa" para posteriormente pulsar "Trazar" lo cual nos creara los archivos para poder posteriormente configurar nuestros archivos de fabricación. NOTA: si no somos nosotros mismos los que vamos a fabricar las placas, es importante en esa misma ventana pulsar "Guardar" para poder crear un reporte el cual indicara cosas como los componentes, donde va cada uno etc.</p>
+                <img src="Imagen17.png" alt="Imagen">
             </article>
         </section>
 
+        <!-- ================= PESTAÑA: MODS ================= -->
+        <section id="mods" class="tab-content">
+            <div class="search-box">
+                <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Mods...">
+            </div>
 
+            <!-- Resumen Mods -->
+            <article class="card searchable">
+                <span class="badge">Mods</span>
+                <h3>Resumen: Pagina de Mods</h3>
+                <p>Mods CE (Community Edition) es un derivado del proyecto de investigación mods de CBA. Mods es una herramienta modular multiplataforma destinada a fablabs la cual se basa en módulos independientes pero interrelacionados. Potencialmente, mods puede utilizarse para CAD, CAM, control de maquinaria, automatización, creación de interfaces de usuario, lectura de dispositivos de entrada, interacción con modelos físicos y mucho más.</p>
+                <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
+            </article>
 
+            <!-- Paso 1 -->
+            <article class="card searchable">
+                <span class="badge">Acceso</span>
+                <h3>Acceso a la herramienta de Mods</h3>
+                <img src="mods1.jpeg" alt="Entrada a la página de mods">
+                <p>Entrando a esta página accedemos a la herramienta de mods.</p>
+            </article>
 
+            <!-- Paso 2 -->
+            <article class="card searchable">
+                <span class="badge">Menú</span>
+                <h3>Página principal de Mods</h3>
+                <img src="mods2.jpeg" alt="Vista inicial de mods y menú Programs">
+                <p>Así se ve la página de mods. En esta pestaña abrimos el menú de programs.</p>
+            </article>
+
+            <!-- Paso 3 -->
+            <article class="card searchable">
+                <span class="badge">Programa</span>
+                <h3>Búsqueda de SRM-20 mill</h3>
+                <img src="mods3.jpeg" alt="Buscador de programas SRM-20 mill 2D PCB">
+                <p>En el buscador buscamos la sección de SRM-20 mill. Aquí seleccionamos mill 2D PCB, que es la herramienta que utilizaremos para trabajar en la monoFab.</p>
+            </article>
+
+            <!-- Paso 4 -->
+            <article class="card searchable">
+                <span class="badge">Flujo de trabajo</span>
+                <h3>Pestañas de trabajo en Mods</h3>
+                <img src="mods4.jpeg" alt="Pestañas y módulos activos para Roland Monofab PCB">
+                <p>Aquí vamos a seleccionar el elemento con el que vamos a trabajar; estas pestañas son las que vamos a estar utilizando.</p>
+            </article>
+
+            <!-- Paso 5 -->
+            <article class="card searchable">
+                <span class="badge">Cargar archivo</span>
+                <h3>Selección del archivo de corte</h3>
+                <img src="mods5.jpeg" alt="Seleccionar archivo SVG de Edge Cuts">
+                <p>Seleccionamos el archivo que vamos a utilizar.</p>
+            </article>
+
+            <!-- Paso 6 -->
+            <article class="card searchable">
+                <span class="badge">Herramienta</span>
+                <h3>Selección de la fresa</h3>
+                <img src="mods6.jpeg" alt="Selección de corte y tamaño de fresa">
+                <p>Seleccionamos la punta de 1.59, que es la más cercana a nuestra punta de 2mm.</p>
+            </article>
+
+            <!-- Paso 7 -->
+            <article class="card searchable">
+                <span class="badge">Configuración</span>
+                <h3>Parámetros para la periferia</h3>
+                <img src="mods7.jpeg" alt="Parámetros de corte y velocidad">
+                <p>Vamos a utilizar los siguientes parámetros para la periferia: 1.99 como la medida de nuestra punta, número de pasadas que va a dar la monoFab, el punto cero que va a utilizar la máquina y 4 como la velocidad a la que dará las pasadas.</p>
+            </article>
+
+            <!-- Paso 8 -->
+            <article class="card searchable">
+                <span class="badge">Cálculo</span>
+                <h3>Calcular tiempo y simulación</h3>
+                <img src="mods9.jpeg" alt="Botón calculate y tiempo estimado">
+                <p>Aquí presionamos para calcular el tiempo y tener una simulación de lo que va a hacer la monoFab, así como la velocidad y el tiempo estimado que tardará en terminar las pasadas.</p>
+            </article>
+
+            <!-- Paso 9 -->
+            <article class="card searchable">
+                <span class="badge">Resultado</span>
+                <h3>Simulación del corte</h3>
+                <img src="mods10.jpeg" alt="Vista previa 3D de la simulación del corte">
+                <p>Simulación del corte.</p>
+            </article>
+        </section>
         
         <!-- PESTAÑA: PROYECTO -->
         <section id="proyectos" class="tab-content">
@@ -407,23 +406,21 @@
             </div>
         </section>
 
-
-
-        
         <!-- PESTAÑA: ACERCA DE -->
         <section id="acerca" class="tab-content">
             <div class="card">
                 <h3>Información del Estudiante</h3>
-                <img src="Yoimagen.JPG" alt="Leonardo" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
+                <img src="Yoimagen.JPG" alt="Leonardo">
                 <p><strong>Nombre:</strong> Leonardo Barrientos Miguel</p>
                 <p><strong>Estudiante de:</strong> Ingenieria Mecatronica, Ibero Puebla</p>
                 <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
                 <p><strong>Contacto:</strong> 203586@iberopuebla.mx</p>
             </div>
 
-                        <div class="card">
+            <div class="card">
                 <h3>Información del Estudiante</h3>
-                <img src="WhatsApp Image 2026-06-23 at 8.05.01 PM" alt="Tomas" style="width: 100%; max-width: 600px; border-radius: 8px; margin: 10px 0;">
+                <!-- Si tu archivo en GitHub se llama Tommy.jpg déjalo así; si tiene el nombre largo de WhatsApp, añade .jpg al final -->
+                <img src="Tommy.jpg" alt="Tomas">
                 <p><strong>Nombre:</strong> Tomas Toledo Fernandez</p>
                 <p><strong>Estudiante de:</strong> Ingenieria Mecatronica, Ibero Puebla</p>
                 <p><strong>Materia/Grupo:</strong> Produccion Electronica grupo B</p>
@@ -432,29 +429,30 @@
         </section>
     </div>
 
-
-    
     <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
     <script>
         // Función para cambiar de pestaña
         function switchTab(tabId) {
-            // Ocultar todas las pestañas
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
-            // Desactivar todos los botones
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(button => button.classList.remove('active'));
 
-            // Mostrar la pestaña seleccionada y activar su botón
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            const targetSection = document.getElementById(tabId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
         }
 
         // Función para el buscador
-        function filterCards() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const cards = document.querySelectorAll('.searchable');
+        function filterCards(inputElement) {
+            const input = inputElement.value.toLowerCase();
+            const currentSection = inputElement.closest('.tab-content');
+            const cards = currentSection.querySelectorAll('.searchable');
 
             cards.forEach(card => {
                 const text = card.textContent.toLowerCase();
