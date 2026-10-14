@@ -309,6 +309,7 @@
             <article class="card searchable">
                 <span class="badge">Mods</span>
                 <h3>Resumen: ¿Qué es Mods CE?</h3>
+                <img src="mods_logo.png" alt="Logo de Mods" style="width: auto; max-width: 140px; margin: 15px auto; display: block; border-radius: 50%;">
                 <p>Mods CE (Community Edition) es una herramienta web desarrollada para laboratorios de fabricación (FabLabs). Funciona mediante bloques interconectados y nos permite preparar proyectos de corte y grabado, calcular las rutas de las fresas y generar los archivos necesarios para máquinas CNC como la Roland SRM-20 sin complicaciones.</p>
                 <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
             </article>
@@ -569,6 +570,21 @@
                 <p>Además de los multímetros básicos, Multisim permite usar modelos de laboratorio reales como el Agilent 34401A, mostrando la lectura con mayor precisión decimal (9.83605 VDC) en su panel digital interactivo.</p>
             </article>
         </section>
+        
+        <!-- Conclusión Multisim -->
+            <article class="card searchable">
+                <span class="badge">Conclusión</span>
+                <h3>¿Por qué conviene simular en Multisim antes de fabricar la PCB?</h3>
+                <p>
+                    Implementar simulaciones previas en Multisim resulta fundamental dentro del flujo de diseño electrónico por varias razones clave:
+                </p>
+                <ul style="margin: 15px 0 15px 25px; line-height: 1.8;">
+                    <li><strong>Prevención de errores y costos:</strong> Permite detectar fallas en el conexionado, valores incorrectos de resistencias o saturaciones de corriente antes de mandar a cortar la placa de cobre o soldar los componentes, evitando el desperdicio de material y componentes dañados.</li>
+                    <li><strong>Verificación rápida sin riesgo:</strong> Los instrumentos virtuales (como multímetros y osciloscopios) facilitan comprobar que las caídas de tensión y las señales coincidan con los cálculos teóricos de manera inmediata y segura.</li>
+                    <li><strong>Integración directa con el diseño físico:</strong> Al comprobar que el circuito funciona correctamente, la información y la lista de conexiones (netlist) se pueden transferir de forma limpia a entornos de ruteo como Ultiboard o KiCad, asegurando que la PCB final sea funcional desde el primer intento.</li>
+                </ul>
+                <span class="date">Validación virtual previa al maquinado</span>
+            </article>
 
         <!-- ================= PESTAÑA: ACERCA DE ================= -->
         <section id="acerca" class="tab-content">
