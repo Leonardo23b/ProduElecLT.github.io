@@ -300,95 +300,165 @@
             </article>
         </section>
 
-        <!-- ================= PESTAÑA: MODS ================= -->
+      <!-- ================= PESTAÑA: MODS ================= -->
         <section id="mods" class="tab-content">
             <div class="search-box">
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Mods...">
             </div>
 
+            <!-- Resumen Mods -->
             <article class="card searchable">
                 <span class="badge">Mods</span>
-                <h3>Resumen: ¿Qué es Mods CE?</h3>
+                <h3>Resumen: Plataforma Mods CE</h3>
                 <img src="mods_logo.png" alt="Logo de Mods" style="width: 100%; max-width: 320px; height: auto; margin: 20px auto; display: block; border-radius: 12px;">
-                <p>Mods CE (Community Edition) es una herramienta web desarrollada para laboratorios de fabricación (FabLabs). Funciona mediante bloques interconectados y nos permite preparar proyectos de corte y grabado, calcular las rutas de las fresas y generar los archivos necesarios para máquinas CNC como la Roland SRM-20 sin complicaciones.</p>
+                <p>Mods CE (Community Edition) es una herramienta web desarrollada para laboratorios de fabricación (FabLabs). Funciona mediante bloques interconectados y nos permite preparar proyectos de corte y grabado, calcular las rutas de las fresas y generar los archivos de instrucciones RML para máquinas CNC como la Roland MonoFab SRM-20.</p>
                 <span class="date">Fuente: https://gitlab.fabcloud.org/pub/project/mods/#what-is-mods</span>
             </article>
 
-            <article class="card searchable">
-                <span class="badge">Acceso</span>
-                <h3>Entrada a la página de Mods</h3>
-                <img src="mods1.jpeg" alt="Entrada a la página de mods">
-                <p>Para comenzar el proceso, abrimos el navegador e ingresamos a la página oficial de Mods Community Edition para cargar la zona de trabajo.</p>
-            </article>
-
-            <article class="card searchable">
-                <span class="badge">Menú</span>
-                <h3>Menú de programas</h3>
-                <img src="mods2.jpeg" alt="Vista inicial de mods y menú Programs">
-                <p>Una vez dentro de la pantalla principal, nos dirigimos a la pestaña superior para abrir la lista de configuraciones y programas disponibles en la plataforma.</p>
-            </article>
-
+            <!-- 1. Inicio y selección del programa -->
             <article class="card searchable">
                 <span class="badge">Configuración</span>
                 <h3>Selección del programa para la fresadora</h3>
-                <img src="mods3.jpeg" alt="Buscador de programas SRM-20 mill 2D PCB">
-                <p>En el buscador escribimos el modelo de la máquina y elegimos la opción de fresado 2D para PCB, que es la que se adapta a nuestra Roland monoFab.</p>
+                <img src="Image (17).jpg" alt="Selección de Roland SRM-20 mill 2D PCB">
+                <p>Ingresamos a la plataforma de Mods y, desde el menú lateral superior de programas, buscamos y abrimos la plantilla "Roland SRM-20 mill 2D PCB", la cual carga el flujo de trabajo predeterminado para el mecanizado de placas de circuito impreso.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Flujo de trabajo</span>
+                <span class="badge">Entorno</span>
                 <h3>Módulos de trabajo conectados</h3>
-                <img src="mods4.jpeg" alt="Pestañas y módulos activos para Roland Monofab PCB">
-                <p>Al abrir el programa, la pantalla nos muestra un diagrama con varios bloques conectados en serie. Estos módulos nos guiarán paso a paso, desde importar el diseño hasta generar el archivo de corte.</p>
+                <img src="Image (3).jpg" alt="Diagrama de módulos en Mods">
+                <p>La pantalla presenta un esquema modular interconectado en serie: inicia con la lectura del vector, procesa los filtros de mapa de bits, ajusta las dimensiones de la herramienta y termina en la descarga del código numérico.</p>
+            </article>
+
+            <!-- ================= ETAPA 1: PISTAS ================= -->
+            <article class="card searchable">
+                <span class="badge">Pistas (Traces)</span>
+                <h3>Carga del archivo de cobre (F_Cu)</h3>
+                <img src="Image (25).jpg" alt="Carga de hola mundo-F_Cu.svg">
+                <p>En el bloque "read SVG" seleccionamos el archivo correspondiente a la capa de pistas de cobre (F_Cu) exportado desde KiCad para preparar el fresado de los caminos conductores.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Archivos</span>
-                <h3>Cargar el archivo de contorno</h3>
-                <img src="mods5.jpeg" alt="Seleccionar archivo SVG de Edge Cuts">
-                <p>Buscamos y seleccionamos el archivo SVG con el contorno de nuestra placa (Edge Cuts), el cual exportamos previamente desde KiCad para definir la forma exterior.</p>
+                <span class="badge">Pistas (Traces)</span>
+                <h3>Inversión de color para aislamiento</h3>
+                <img src="Image.jpg" alt="Inversión de color en el módulo convert SVG image">
+                <p>Pulsamos la opción "invert" para dejar las pistas conductoras en color blanco y el fondo en color negro. Esto le indica a la fresadora que solo debe remover el cobre perimetral (aislamiento) sin tocar las líneas del circuito.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Herramienta</span>
-                <h3>Elección de la fresa</h3>
-                <img src="mods6.jpeg" alt="Selección de corte y tamaño de fresa">
-                <p>Elegimos la medida de broca que más se acerque a la que vamos a usar en la máquina física, dejando los parámetros base listos para ajustarse.</p>
+                <span class="badge">Pistas (Traces)</span>
+                <h3>Trayectoria de desbaste de pistas</h3>
+                <img src="Image (7).jpg" alt="Recorrido vectorial de aislamiento de pistas">
+                <p>Generamos el cálculo de trayectorias ("calculate") para visualizar las líneas de pasada que seguirá la fresa plana o punta en V alrededor de las pistas para aislarlas eléctricamente.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Parámetros</span>
-                <h3>Ajuste de medidas y velocidad</h3>
-                <img src="mods7.jpeg" alt="Parámetros de corte y velocidad">
-                <p>Configuramos los datos clave para el corte exterior: ingresamos el grosor real de la punta, cuántas pasadas dará la máquina, el punto de inicio (origen cero) y la velocidad de desplazamiento.</p>
+                <span class="badge">Pistas (Traces)</span>
+                <h3>Descarga del archivo RML para pistas</h3>
+                <img src="Image (6).jpg" alt="Módulo Roland SRM-20 y tiempo estimado de pistas">
+                <p>Revisamos el tiempo estimado de maquinado que tardará la máquina y guardamos el archivo de instrucciones listo para transferir a la Roland MonoFab.</p>
+            </article>
+
+            <!-- ================= ETAPA 2: PERFORACIONES ================= -->
+            <article class="card searchable">
+                <span class="badge">Perforaciones (Drill)</span>
+                <h3>Carga de la capa de barrenos</h3>
+                <img src="Image (8).jpg" alt="Carga de archivo de perforaciones User_1">
+                <p>Cargamos el archivo vectorial que contiene las coordenadas y posiciones de los taladrados (User_1) necesarios para pines y componentes through-hole de la placa.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Cálculo</span>
-                <h3>Calcular trayectorias y tiempo</h3>
-                <img src="mods9.jpeg" alt="Botón calculate y tiempo estimado">
-                <p>Damos clic en el botón de calcular para que el programa trace el recorrido de la fresa y nos muestre el tiempo total que tardará la máquina en terminar el trabajo.</p>
+                <span class="badge">Perforaciones (Drill)</span>
+                <h3>Ajuste de profundidad de taladrado</h3>
+                <img src="Image (9).jpg" alt="Ajuste de parámetros y broca para taladro">
+                <p>Configuramos la broca de perforación y definimos la profundidad de penetración en el eje Z para asegurar que atraviese por completo el grosor de la placa fenólica sin dañar la cama de sacrificio.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Descarga</span>
-                <h3>Obtener el archivo para la monoFab</h3>
-                <img src="mods13.jpeg" alt="Módulo save file y descarga para Roland">
-                <p>Ubicamos el bloque de guardado y descargamos el archivo final (.rml), el cual cargaremos directamente en el programa que controla la fresadora[cite: 13].</p>
+                <span class="badge">Perforaciones (Drill)</span>
+                <h3>Inspección de puntos de taladro</h3>
+                <img src="Image (14).jpg" alt="Puntos de perforación en Mods">
+                <p>Verificamos en la vista previa que todos los puntos de perforación estén ubicados en los centros exactos de los pads correspondientes antes de enviar el comando a la máquina.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Trayectoria</span>
-                <h3>Revisión de las pasadas de corte</h3>
-                <img src="mods11.jpeg" alt="Trazo de compensación y pasadas de corte">
-                <p>Se abrirá una vista de líneas donde podemos comprobar cómo se moverá la fresa paso a paso alrededor de la figura para no dañar el circuito[cite: 12].</p>
+                <span class="badge">Perforaciones (Drill)</span>
+                <h3>Simulación y exportación de perforaciones</h3>
+                <img src="Image (13).jpg" alt="Simulación 3D de taladrado">
+                <p>Observamos la simulación tridimensional para comprobar los agujeros pasantes y descargamos el archivo de corte con el tiempo calculado para este proceso.</p>
+            </article>
+
+            <!-- ================= ETAPA 3: ETIQUETAS ================= -->
+            <article class="card searchable">
+                <span class="badge">Etiquetas (Labels)</span>
+                <h3>Carga del texto y serigrafía (User_2)</h3>
+                <img src="Image (12).jpg" alt="Carga de archivo de etiquetas User_2">
+                <p>Importamos el diseño con los textos, identificadores y nombres de componentes (User_2) para realizar un grabado superficial sobre la superficie de cobre.</p>
             </article>
 
             <article class="card searchable">
-                <span class="badge">Resultado</span>
-                <h3>Simulación visual en 3D</h3>
-                <img src="mods10.jpeg" alt="Vista previa 3D de la simulación del corte">
-                <p>Finalmente, podemos revisar la simulación en 3D para confirmar que la pieza queda totalmente recortada y con la forma deseada antes de enviarla a fabricar[cite: 10].</p>
+                <span class="badge">Etiquetas (Labels)</span>
+                <h3>Ajuste para grabado superficial</h3>
+                <img src="Image (18).jpg" alt="Configuración de punta fina V-bit para grabado">
+                <p>Seleccionamos los parámetros de la punta cónica fina o V-bit, reduciendo la profundidad de corte para únicamente marcar el cobre sin perforar la estructura de la baquelita.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Etiquetas (Labels)</span>
+                <h3>Trazo de letras y movimientos rápidos</h3>
+                <img src="Image (15).jpg" alt="Recorrido de grabado de letras con movimientos rápidos en rojo">
+                <p>Inspeccionamos el recorrido de las letras; las líneas rojas indican los desplazamientos de seguridad en el aire entre un carácter y otro para evitar rayaduras accidentales.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Etiquetas (Labels)</span>
+                <h3>Simulación 3D de las etiquetas grabadas</h3>
+                <img src="Image (16).jpg" alt="Simulación del grabado de textos sobre la placa">
+                <p>Comprobamos en la simulación tridimensional que los textos resulten legibles y definidos en el área libre de la placa antes de descargar su respectivo archivo RML.</p>
+            </article>
+
+            <!-- ================= ETAPA 4: PERIFERIA ================= -->
+            <article class="card searchable">
+                <span class="badge">Periferia (Edge Cuts)</span>
+                <h3>Selección de herramienta de corte exterior</h3>
+                <img src="Image (20).jpg" alt="Selección de fresa de 1.59 mm para corte">
+                <p>Para recortar la silueta final de la PCB, cargamos la capa Edge Cuts y elegimos la fresa de corte de contorno (1.59 mm / 2 mm), la cual posee mayor resistencia para desbaste completo.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia (Edge Cuts)</span>
+                <h3>Cálculo de pasadas perimetrales</h3>
+                <img src="Image (19).jpg" alt="Cálculo de trayectorias de corte y velocidad">
+                <p>Definimos la velocidad de avance, la medida nominal de la punta y la cantidad de pasadas escalonadas en profundidad para garantizar que el corte del contorno sea limpio y estable.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia (Edge Cuts)</span>
+                <h3>Visualización del contorno de corte</h3>
+                <img src="Image (24).jpg" alt="Pasadas concéntricas de la fresa en el contorno">
+                <p>Revisamos las líneas concéntricas exteriores para asegurar que la compensación del diámetro de la broca se efectúe por fuera del diseño, conservando las dimensiones originales de la tarjeta.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Periferia (Edge Cuts)</span>
+                <h3>Simulación 3D del corte exterior</h3>
+                <img src="Image (22).jpg" alt="Simulación 3D del corte perimetral completo">
+                <p>Verificamos el desbaste completo en la vista 3D y descargamos el archivo RML perimetral desde el módulo de guardado para concluir la preparación CAM.</p>
+            </article>
+
+            <!-- ================= GESTIÓN DE ARCHIVOS RML ================= -->
+            <article class="card searchable">
+                <span class="badge">Archivos RML</span>
+                <h3>Organización de archivos para la MonoFab</h3>
+                <img src="Image (21).jpg" alt="Renombrado de archivos RML en la carpeta de descargas">
+                <p>En el explorador de archivos se recomienda renombrar cada archivo descargado indicando con claridad su proceso (pistas, perforaciones, texto o corte), ya que Mods los genera por defecto con el nombre "SVG image.rml".</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Coordenadas</span>
+                <h3>Estructura interna del código RML</h3>
+                <img src="Image (30).jpg" alt="Código de coordenadas RML abierto en VS Code">
+                <p>Al inspeccionar el archivo generado en un editor de texto podemos apreciar las instrucciones RML nativas de Roland: comandos de velocidad, elevaciones del cabezal en Z y coordenadas absolutas que ejecutará la fresadora física.</p>
             </article>
         </section>
 
