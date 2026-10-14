@@ -179,7 +179,7 @@
         <p>Maestro: Javier Osorio Figueroa | Alumnos: Leo y Tommy</p>
     </header>
 
-    <!-- NAVEGACIÓN POR PESTAÑAS (CORREGIDO CON THIS) -->
+    <!-- NAVEGACIÓN POR PESTAÑAS (CON THIS PARA NAVEGACIÓN PERFECTA) -->
     <nav>
         <button class="tab-btn active" onclick="switchTab('inicio', this)">Inicio</button>
         <button class="tab-btn" onclick="switchTab('kicad', this)">KiCad</button>
@@ -418,23 +418,26 @@
                 <span class="badge">Intalación placa</span>
                 <h3>¿Cómo preparar nuestro material en la fresadora?</h3>
                 <p>Para la instalación de nuestro material en la fresadora y posteriormente su configuración lo primero que llevamos a acabo es el uso de una "placa de sacrifición" la cual su función es evitar que la propia plataforma de la fresadora se dañe u obtenga marcas. En esta plataforma vamos a pegar nuestra placa haciendo uso de cinta de doble cara buscando que quede lo más pararelo posible para evitar errores.</p>
-                <img src="Monofab4.png" alt="Foto Leonardo">
+                <!-- Corregido a Monofab4.jpeg -->
+                <img src="Monofab4.jpeg" alt="Preparación placa">
                 <p>Una vez realizado esto podemos instalar nuestro material en la fresadora y ajustandola con los tornillos que esta misma tiene.</p>
-                <img src="Monofab5.png" alt="Foto Leonardo">
+                <!-- Corregido a Monofab5.jpeg -->
+                <img src="Monofab5.jpeg" alt="Ajuste de tornillos">
             </article>
 
             <article class="card searchable">
                 <span class="badge">Broca</span>
                 <h3>¿Cómo instalar la broca?</h3>
                 <p>Para realizar la instalación de la broca tenemos que hacer uso de la llave Allen correspondiente, con la cual podremos ajustar como es debido las brocas que vamos a ocupar para cada capa.</p>
-                <img src="Monofab6.png" alt="Foto Leonardo">
+                <!-- Corregido a Monofab6.jpeg -->
+                <img src="Monofab6.jpeg" alt="Instalación de broca con llave allen">
             </article>
 
             <article class="card searchable">
                 <span class="badge">Configuración</span>
                 <h3>Configuración de los origenes</h3>
                 <p>Para poder empezar a fabricar lo primero que debemos hacer es establecer los origenes de nuestros ejes "x", "y" y "z", para hacer esto lo que buscamos el "rallar" la superficie de nuestra placa para que de esta manera la broca no entre demasiado y terminemos sin pistas. La configuración la vamos a realizar con el uso de nuestro Vpanel y de tantear hasta obtener un rayon en la superficie de nuestra placa.</p>
-                <img src="Monofab1.png" alt="Foto Leonardo">
+                <img src="Monofab1.png" alt="Configuración de orígenes">
                 <p>Una vez establecido nuestros origenes, primero recomendamos apagar la broca y levantarla en el eje "z" para poder comprobar que si esta bien establecido y de esta manera empezar a fabricar.</p>
             </article>
 
@@ -443,19 +446,19 @@
                 <h3>¿Cómo agregar nuestros archivos de fabricación?</h3>
                 <p>Primero que nada, ¿cómo recomendamos nosotros el orden de fabricación de cada una de nuestras capas? Nosotros recomendamos iniciar con las perforaciones que es lo más "minusculo" de hacer, para posteriormente realizar las etiquetas y las pistas; y finalmente el contorno de nuestra placa. Esto con el objetivo de evitar algun error de que se mueva la placa u otras cosas.</p>
                 <p>Para agregar nuestros archivos lo primero que debemos hacer es, desde la vista general del Vpanel buscar el apartado de "Cut", una vez abierto nos abrira otra ventana en la cual buscaremos el boton de "Add" para poder agregar nuestros archivos. (Podemos agregar más de un archivo para fabricar a la vez y a su vez debemos saber que en el orden que los insertemos sera el oden en que se fabriquen)</p>
-                <img src="Monofab3.png" alt="Foto Leonardo">
-                <img src="Monofab2.png" alt="Foto Leonardo">
+                <img src="Monofab3.png" alt="Panel de corte Vpanel">
+                <img src="Monofab2.png" alt="Lista de archivos para corte">
             </article>
 
             <article class="card searchable">
                 <span class="badge">Fabricar</span>
                 <h3>La fabricación</h3>
                 <p>Una vez hecha toda la configuración y calibración para empezar a fabricar simplemente debemos pulsar en el boton de output para que empiece a fabricar y estar atentos por cualquier tipo de problema que pueda llegar a suceder, y limpiar una vez que terminemos para tratar de no inhalar el polvo residual que quede.</p>
-                <img src="Monofab2.png" alt="Foto Leonardo">
+                <img src="Monofab2.png" alt="Proceso de fabricación">
             </article>
         </section>
 
-       <!-- ================= PESTAÑA: MULTISIM ================= -->
+        <!-- ================= PESTAÑA: MULTISIM (TODAS CORREGIDAS A .PNG) ================= -->
         <section id="multisim" class="tab-content">
             <div class="search-box">
                 <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Multisim...">
@@ -474,7 +477,7 @@
             <article class="card searchable">
                 <span class="badge">Entorno</span>
                 <h3>Área de trabajo de Multisim</h3>
-                <img src="ms1.jpg" alt="Ventana principal de Multisim">
+                <img src="ms1.png" alt="Ventana principal de Multisim">
                 <p>Al iniciar Multisim se abre la hoja de trabajo en blanco con su rejilla de puntos y las barras de herramientas superiores para controlar la simulación y gestionar el proyecto.</p>
             </article>
 
@@ -490,7 +493,7 @@
             <article class="card searchable">
                 <span class="badge">Librería</span>
                 <h3>Búsqueda en la base de datos de componentes</h3>
-                <img src="ms3.jpg" alt="Ventana Select a Component">
+                <img src="ms3.png" alt="Ventana Select a Component">
                 <p>Desde el menú de componentes ("Place Basic") accedemos a la librería completa para buscar elementos pasivos como resistencias, capacitores o inductores organizados por familias.</p>
             </article>
 
@@ -498,7 +501,7 @@
             <article class="card searchable">
                 <span class="badge">Propiedades</span>
                 <h3>Configuración del valor de la resistencia</h3>
-                <img src="ms4.jpg" alt="Propiedades de la resistencia y valor en Ohms">
+                <img src="ms4.png" alt="Propiedades de la resistencia y valor en Ohms">
                 <p>Al hacer doble clic en el componente abrimos la pestaña "Value", donde podemos escribir el valor exacto de resistencia (en Ohms, kΩ, etc.) y definir su tolerancia para el cálculo de la simulación.</p>
             </article>
 
@@ -506,7 +509,7 @@
             <article class="card searchable">
                 <span class="badge">Identificación</span>
                 <h3>Etiquetado y nombre del componente (RefDes)</h3>
-                <img src="ms5.jpg" alt="Pestaña Label del componente">
+                <img src="ms5.png" alt="Pestaña Label del componente">
                 <p>En la pestaña "Label" cambiamos el identificador del componente (como R1, R2 o R3) para mantener ordenado el esquema y saber qué elemento estamos midiendo en cada punto.</p>
             </article>
 
@@ -514,7 +517,7 @@
             <article class="card searchable">
                 <span class="badge">Cableado</span>
                 <h3>Interconexión entre componentes</h3>
-                <img src="ms6.jpg" alt="Cableado entre terminales con puntero en cruz">
+                <img src="ms6.png" alt="Cableado entre terminales con puntero en cruz">
                 <p>Al pasar el cursor por los extremos de las resistencias, el cursor cambia a un puntero de cableado con el que podemos trazar las líneas para unir las terminales entre sí.</p>
             </article>
 
@@ -522,7 +525,7 @@
             <article class="card searchable">
                 <span class="badge">Alimentación</span>
                 <h3>Selección de fuentes de voltaje y tierra</h3>
-                <img src="ms7.jpg" alt="Ventana de selección de fuentes y Ground">
+                <img src="ms7.png" alt="Ventana de selección de fuentes y Ground">
                 <p>Desde el icono de fuentes ("Place Source") abrimos la categoría de alimentación para insertar fuentes de corriente continua (DC Power), alterna o la referencia a tierra (Ground).</p>
             </article>
 
@@ -530,7 +533,7 @@
             <article class="card searchable">
                 <span class="badge">Esquemático</span>
                 <h3>Circuito cerrado con referencia a tierra</h3>
-                <img src="ms8.jpg" alt="Circuito completo con fuente de 12V y tierra">
+                <img src="ms8.png" alt="Circuito completo con fuente de 12V y tierra">
                 <p>Terminamos de conectar la fuente de 12V en serie con las resistencias y agregamos la tierra al nodo inferior para que el simulador pueda calcular las caídas de tensión correctamente.</p>
             </article>
 
@@ -538,7 +541,7 @@
             <article class="card searchable">
                 <span class="badge">Medición</span>
                 <h3>Colocación del multímetro digital</h3>
-                <img src="ms9.jpg" alt="Multímetro virtual XMM1 colocado en el lienzo">
+                <img src="ms9.png" alt="Multímetro virtual XMM1 colocado en el lienzo">
                 <p>Seleccionamos el multímetro de la barra lateral y lo arrastramos al lienzo para medir la caída de voltaje en la primera resistencia (R1).</p>
             </article>
 
@@ -546,7 +549,7 @@
             <article class="card searchable">
                 <span class="badge">Lectura</span>
                 <h3>Medición de voltaje sobre la primera resistencia</h3>
-                <img src="ms10.jpg" alt="Pantalla del multímetro marcando 2.164 V">
+                <img src="ms10.png" alt="Pantalla del multímetro marcando 2.164 V">
                 <p>Iniciamos la simulación con el botón verde de "Run" y abrimos la carátula del multímetro: configurado en voltaje continuo (V DC), nos marca 2.164 V sobre la resistencia de 2.2 kΩ.</p>
             </article>
 
@@ -554,7 +557,7 @@
             <article class="card searchable">
                 <span class="badge">Comprobación</span>
                 <h3>Medición de voltaje en ambas resistencias</h3>
-                <img src="ms11.jpg" alt="Dos multímetros midiendo voltajes de 2.164V y 9.836V">
+                <img src="ms11.png" alt="Dos multímetros midiendo voltajes de 2.164V y 9.836V">
                 <p>Conectamos un segundo multímetro (XMM2) en paralelo con R3 (10 kΩ). El primero registra 2.164 V y el segundo 9.836 V, sumando los 12 V totales de la fuente según la ley de voltajes de Kirchhoff.</p>
             </article>
 
@@ -562,7 +565,7 @@
             <article class="card searchable">
                 <span class="badge">Instrumento de Banco</span>
                 <h3>Simulación con multímetro de banco de alta precisión</h3>
-                <img src="ms12.jpg" alt="Multímetro Agilent 34401A mostrando 09.83605 VDC">
+                <img src="ms12.png" alt="Multímetro Agilent 34401A mostrando 09.83605 VDC">
                 <p>Además de los multímetros básicos, Multisim permite usar modelos de laboratorio reales como el Agilent 34401A, mostrando la lectura con mayor precisión decimal (9.83605 VDC) en su panel digital interactivo.</p>
             </article>
         </section>
@@ -589,31 +592,25 @@
         </section>
     </div>
 
-    <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD CORREGIDA) -->
+    <!-- CÓDIGO JAVASCRIPT (INTERACTIVIDAD) -->
     <script>
-        // Función para cambiar de pestaña recibiendo el botón clickeado
         function switchTab(tabId, clickedBtn) {
-            // Ocultar todas las secciones
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
-            // Desactivar todos los botones de la barra
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(button => button.classList.remove('active'));
 
-            // Activar la sección deseada
             const targetSection = document.getElementById(tabId);
             if (targetSection) {
                 targetSection.classList.add('active');
             }
 
-            // Activar el botón correspondiente
             if (clickedBtn) {
                 clickedBtn.classList.add('active');
             }
         }
 
-        // Función para el buscador
         function filterCards(inputElement) {
             const input = inputElement.value.toLowerCase();
             const currentSection = inputElement.closest('.tab-content');
