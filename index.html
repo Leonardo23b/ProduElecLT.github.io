@@ -186,6 +186,7 @@
         <button class="tab-btn" onclick="switchTab('mods', this)">Mods</button>
         <button class="tab-btn" onclick="switchTab('monofab', this)">MonoFab</button>
         <button class="tab-btn" onclick="switchTab('multisim', this)">Multisim</button>
+        <button class="tab-btn" onclick="switchTab('altium', this)">Altium Designer</button>
         <button class="tab-btn" onclick="switchTab('acerca', this)">Acerca de nosotros</button>
     </nav>
 
@@ -297,6 +298,144 @@
                 <img src="Imagen16.png" alt="Imagen">
                 <p>Ya en esta ventana dejaremos incluidas solamente las capas que nosotros ocupamos e incluiremos el apartado de "Ajustar pagina a la placa" para posteriormente pulsar "Trazar" lo cual nos creara los archivos para poder posteriormente configurar nuestros archivos de fabricación. NOTA: si no somos nosotros mismos los que vamos a fabricar las placas, es importante en esa misma ventana pulsar "Guardar" para poder crear un reporte el cual indicara cosas como los componentes, donde va cada uno etc.</p>
                 <img src="Imagen17.png" alt="Imagen">
+            </article>
+        </section>
+        <!-- ================= PESTAÑA: ALTIUM DESIGNER ================= -->
+        <section id="altium" class="tab-content">
+            <div class="search-box">
+                <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Altium...">
+            </div>
+
+            <!-- Banner Altium -->
+            <article class="card searchable">
+                <span class="badge">Altium Designer</span>
+                <h3>Resumen: Software de Diseño Electrónico Profesional</h3>
+                <img src="altium_logo.png" alt="Logo de Altium Designer" style="width: 100%; max-width: 350px; height: auto; margin: 20px auto; display: block; border-radius: 12px;">
+                <p>Altium Designer es una plataforma avanzada de automatización de diseño electrónico (EDA) utilizada en la industria y el entorno académico. Permite gestionar de manera integrada el diseño de esquemáticos, la simulación de señales de mezcla analógica/digital, la definición de reglas de fabricación avanzadas y el ruteo de placas impresas de alta densidad con visualización 3D en tiempo real.</p>
+                <span class="date">Plataforma EDA - Universidad Iberoamericana Puebla</span>
+            </article>
+
+            <!-- 1. Inicio del Proyecto -->
+            <article class="card searchable">
+                <span class="badge">Proyecto</span>
+                <h3>1. Creación y estructura del proyecto PCB</h3>
+                <img src="altium1.png" alt="Creación de proyecto en Altium">
+                <p>Iniciamos la plataforma y creamos un nuevo proyecto de PCB (`PCB Control pro.PrjPcb`). Altium organiza todos los archivos dentro de este contenedor para mantener enlazados los esquemáticos, la lista de materiales (BOM) y el diseño de la placa física.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Entorno</span>
+                <h3>2. Interfaz principal y gestión de licencia</h3>
+                <img src="altium2.png" alt="Interfaz de Altium Designer">
+                <p>En el panel lateral de "Projects" podemos visualizar los archivos activos del grupo de trabajo. Verificamos que la licencia universitaria de la Ibero Puebla se encuentre activa para habilitar todas las librerías y extensiones de simulación.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Archivos</span>
+                <h3>3. Creación de documentos (Schematic y PCB)</h3>
+                <img src="altium3.png" alt="Menú de creación de documentos">
+                <p>Desde el menú <code>File -> New</code> agregamos los dos documentos principales de trabajo a nuestro proyecto: una hoja de diagrama esquemático (<code>.SchDoc</code>) y una plantilla de circuito impreso (<code>.PcbDoc</code>).</p>
+            </article>
+
+            <!-- 2. Esquemático y Componentes -->
+            <article class="card searchable">
+                <span class="badge">Componentes</span>
+                <h3>4. Búsqueda e inserción de librerías</h3>
+                <img src="altium4.png" alt="Panel de búsqueda de componentes">
+                <p>Abrimos el panel lateral de "Components" para buscar e importar los elementos necesarios (resistencias, capacitores, LEDs y microcontroladores). Altium permite utilizar tanto librerías locales como la base de datos de fabricantes con modelos 3D incluidos.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Propiedades</span>
+                <h3>5. Edición de parámetros de componentes</h3>
+                <img src="altium5.png" alt="Edición de valores de resistencia">
+                <p>Al seleccionar un componente en el lienzo abrimos la ventana de "Properties", donde modificamos su designador (ej. R1, R2), su descripción, y asignamos el valor nominal exacto en Ohms para ajustar la impedancia deseada.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Etiquetas</span>
+                <h3>6. Uso de etiquetas de red (Net Labels)</h3>
+                <img src="altium6.png" alt="Inserción de Net Labels">
+                <p>Colocamos etiquetas de red (Net Labels) en las líneas de conexión clave. Esto nos permite unir eléctricamente distintos puntos del circuito sin necesidad de tirar cables largos por toda la hoja, manteniendo el esquemático limpio y comprensible.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Alimentación</span>
+                <h3>7. Inserción de puertos de poder (VCC y GND)</h3>
+                <img src="altium7.png" alt="Puertos de voltaje y tierra">
+                <p>Desde la barra de herramientas rápidas agregamos los símbolos de tierra (GND) y los rieles de voltaje (VCC / 3.3V / 5V). Altium asume de manera implícita la continuidad eléctrica en todos los nodos compartidos con el mismo símbolo.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Cableado</span>
+                <h3>8. Conexión de terminales con la herramienta Wire</h3>
+                <img src="altium8.png" alt="Trazado de conexiones en esquemático">
+                <p>Haciendo uso del comando corto <code>Ctrl + W</code> seleccionamos la herramienta "Place Wire" para interconectar los pines de los componentes, cerrando las mallas y formando el circuito esquemático completo.</p>
+            </article>
+
+            <!-- 3. Simulaciones y Reglas -->
+            <article class="card searchable">
+                <span class="badge">Simulación</span>
+                <h3>9. Configuración de fuentes y sondas de simulación</h3>
+                <img src="altium9.png" alt="Configuración de simulación analógica">
+                <p>Accedemos al menú <code>Simulate -> Place Sources / Probes</code> para colocar generadores de señal y puntos de prueba de voltaje/corriente. Esta herramienta nos permite analizar la respuesta en frecuencia y régimen permanente del circuito.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Simulación</span>
+                <h3>10. Verificación analógica antes de la fabricación</h3>
+                <img src="altium10.png" alt="Esquemático listo para simulación">
+                <p>Validamos mediante la simulación en Altium que el comportamiento de los filtros y divisores de voltaje coincida exactamente con nuestros cálculos teóricos antes de invertir recursos en el maquinado físico.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Reglas PCB</span>
+                <h3>11. Importación de reglas de fabricación (JLCPCB / China)</h3>
+                <img src="altium11.png" alt="Editor de reglas de fabricación en Altium">
+                <p>Abrimos el editor <code>Design -> Rules</code> para ingresar las limitaciones de la empresa fabricante china: separaciones mínimas entre pistas (Clearance de 6mil), diámetros de broca (Hole Size) y grosores mínimos de máscara de soldadura (Solder Mask).</p>
+            </article>
+
+            <!-- 4. Ruteo y PCB 2D/3D -->
+            <article class="card searchable">
+                <span class="badge">Transferencia</span>
+                <h3>12. Transferencia del esquemático al lienzo de PCB</h3>
+                <img src="altium12.png" alt="Update PCB Document">
+                <p>Una vez terminado y revisado el esquemático, seleccionamos <code>Design -> Update PCB Document</code> para proyectar todos los footprint de nuestros componentes y sus redes de conexión a la placa física.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">ECO</span>
+                <h3>13. Ejecución de la orden de cambio de ingeniería (ECO)</h3>
+                <img src="altium13.png" alt="Ejecución de cambios ECO">
+                <p>Validamos y ejecutamos la ventana "Engineering Change Order". Altium transfiere automáticamente las huellas físicas de los resistores, botones y conectores a la mesa de trabajo de la tarjeta.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Layout</span>
+                <h3>14. Acomodo de componentes y guía de conexiones (Ratsnest)</h3>
+                <img src="altium14.png" alt="Componentes iniciales en el PCB">
+                <p>Acomodamos estratégicamente los componentes en el área de corte. Las líneas delgadas en diagonal (Ratsnest) nos indican de manera dinámica qué terminales deben conectarse entre sí con pistas de cobre.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Ruteo</span>
+                <h3>15. Trazado de pistas con Interactive Routing</h3>
+                <img src="altium15.png" alt="Ruteo interactivo de pistas de cobre">
+                <p>Utilizamos la herramienta <code>Interactive Routing</code> para trazar las pistas conductoras en la capa superior (Top Layer - color rojo). Altium nos ayuda a respetar de manera automática las distancias mínimas para evitar cortocircuitos.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Placa 2D</span>
+                <h3>16. Inspección de ruteo y serigrafía final en 2D</h3>
+                <img src="altium16.png" alt="Placa PCB ruteada completa en 2D">
+                <p>Visualizamos la placa ruteada al 100%: verificamos el paso de las pistas de cobre, la inclusión del plano de tierra y que los nombres de los componentes impresos en la serigrafía (Top Overlay) no se encimen sobre las donas de soldadura.</p>
+            </article>
+
+            <article class="card searchable">
+                <span class="badge">Placa 3D</span>
+                <h3>17. Visualización fotorrealista en 3D (Tecla 3)</h3>
+                <img src="altium17.png" alt="Vista tridimensional 3D de la PCB en Altium">
+                <p>Presionando la tecla <code>3</code> en el teclado cambiamos a la vista 3D fotorrealista. Esta función permite inspeccionar la altura de los componentes, la estética de la tarjeta y garantizar que la PCB pueda montarse perfectamente en un gabinete o chasis 3D.</p>
             </article>
         </section>
 
