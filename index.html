@@ -901,16 +901,68 @@
             </article>
         </section>
 
-        <!-- PESTAÑA: Soldadura -->
-        <section id="Soldadura" class="tab-content active">
+        <!-- ================= PESTAÑA: SOLDADURA ================= -->
+        <section id="soldadura" class="tab-content">
+            <div class="search-box">
+                <input type="text" onkeyup="filterCards(this)" placeholder="🔍 Buscar en Soldadura...">
+            </div>
+
             <h2>Soldadura</h2>
-            <p style="margin-bottom: 1.5rem;">Esta es página donde publicaremos documentaremos acerca de nuestro progreso en la materia de producción electronica.</p>
-            
+            <p style="margin-bottom: 1.5rem;">Aquí vamos a documentar las distintas técnicas que existen para soldar componentes electrónicos y, al final, cómo lo realizamos nosotros con nuestra propia placa.</p>
+
+            <!-- TÉCNICA 1 -->
             <div class="card">
-                <span class="badge">Producción Electronica</span>
-                <h3>¿Que hacemos en producción electronica?</h3>
-                <img src="ImagenPlaca.jpg" alt="Foto de placa">
-                <p>La materia de producción electronica es una materia enfocada en diseñar y fabricar componentes electronicos desde cero, desde el planteamiento del proyecto hasta la fabricación de placas. Aqui abarcamos desde la elaboración de esquematicos y el diseño de placas en software como KiCad o Altium, hasta el uso de herramientas y software especializado para el corte, soldado y ensamblaje de dichas placas.</p>
+                <span class="badge">Técnicas de soldadura</span>
+                <h3>Soldadura con cautín (through-hole)</h3>
+                <img src="soldadura-cautin.jpg" alt="Soldadura con cautín de componente through-hole">
+                <p>Es la técnica más básica y común. Los componentes tienen patas que atraviesan la placa y se sueldan del otro lado. Se calienta a la vez la pata y la pista con la punta del cautín, se aplica el estaño y se retira, dejando una unión brillante en forma de cono.</p>
+            </div>
+
+            <!-- TÉCNICA 2 -->
+            <div class="card">
+                <span class="badge">Técnicas de soldadura</span>
+                <h3>Soldadura SMD con cautín</h3>
+                <img src="soldadura-smd-cautin.jpg" alt="Soldadura SMD con cautín">
+                <p>Se usa para componentes de montaje superficial. Primero se estaña una de las pistas, se sujeta el componente con pinzas y se suelda un lado; después se sueldan las demás terminales. Requiere punta fina, buen pulso y, de preferencia, flux.</p>
+            </div>
+
+            <!-- TÉCNICA 3 -->
+            <div class="card">
+                <span class="badge">Técnicas de soldadura</span>
+                <h3>Soldadura con aire caliente</h3>
+                <img src="soldadura-aire-caliente.jpg" alt="Estación de aire caliente">
+                <p>Se aplica pasta de soldar sobre las pistas, se coloca el componente y se calienta con una pistola de aire caliente hasta que la pasta se funde. Es ideal para circuitos integrados con muchas terminales y para retrabajo.</p>
+            </div>
+
+            <!-- TÉCNICA 4 -->
+            <div class="card">
+                <span class="badge">Técnicas de soldadura</span>
+                <h3>Soldadura por reflujo</h3>
+                <img src="soldadura-reflujo.jpg" alt="Horno de reflujo">
+                <p>Se coloca pasta de soldar en toda la placa, se montan todos los componentes y se mete a un horno o plancha de reflujo que sigue un perfil de temperatura. Permite soldar muchos componentes SMD a la vez y con resultados muy uniformes.</p>
+            </div>
+
+            <!-- TÉCNICA 5 -->
+            <div class="card">
+                <span class="badge">Técnicas de soldadura</span>
+                <h3>Soldadura por ola</h3>
+                <img src="soldadura-ola.jpg" alt="Máquina de soldadura por ola">
+                <p>Es una técnica industrial para componentes through-hole. La placa pasa sobre una ola de estaño fundido que suelda todas las patas de una sola vez. Se usa en producción en masa, no suele hacerse de forma manual.</p>
+            </div>
+
+            <!-- TÉCNICA 6 -->
+            <div class="card">
+                <span class="badge">Técnicas de soldadura</span>
+                <h3>Desoldado</h3>
+                <img src="desoldado.jpg" alt="Desoldado con malla">
+                <p>No es una forma de soldar, pero es indispensable para corregir errores. Se retira el estaño sobrante con malla desoldadora o con una bomba de succión para poder quitar o cambiar un componente sin dañar la placa.</p>
+            </div>
+
+            <!-- AVISO: SIGUE NUESTRO PROCESO -->
+            <div class="card">
+                <span class="badge">Siguiente</span>
+                <h3>Ahora veamos cómo soldamos nosotros</h3>
+                <p>Después de conocer las técnicas más comunes, a continuación mostramos el proceso que seguimos nosotros para soldar nuestras placas, paso a paso.</p>
             </div>
         </section>
 
