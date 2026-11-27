@@ -966,6 +966,130 @@
             </div>
         </section>
 
+                <!-- PESTAÑA: PROYECTO FINAL -->
+        <section id="proyecto-final" class="tab-content">
+            <h2>Proyecto final</h2>
+            <p style="margin-bottom: 1.5rem;">Con todos los conocimientos que nos brindó la materia, desde el diseño de esquemáticos y placas en KiCad y Altium, hasta el uso de la monoFab Roland SRM-20 y las distintas técnicas de soldadura, ya pudimos empezar nuestro proyecto final. En esta sección documentamos paso a paso todo lo que hemos hecho hasta ahora: desde la idea inicial, el diseño y la fabricación de la placa, hasta los errores que tuvimos y cómo los resolvimos.</p>
+
+            <!-- IDEAS INICIALES -->
+            <div class="card">
+                <span class="badge">Proyecto final</span>
+                <h3>Ideas iniciales</h3>
+                <p>Lo primero que hicimos fue pensar en nuestra idea. Queríamos un proyecto que nos permitiera aplicar todo lo aprendido en la materia: diseño de esquemáticos, diseño de placas, fabricación, soldadura y programación. Entre las propuestas que tuvimos estaban hacer un mouse, que nos parecía una opción sencilla y útil, y una mini consola tipo Game Boy, que sonaba más ambiciosa y divertida, pero que implicaba una pantalla y un sistema mucho más complejo.</p>
+            </div>
+
+            <!-- DECISIÓN FINAL -->
+            <div class="card">
+                <span class="badge">Proyecto final</span>
+                <h3>Decisión final</h3>
+                <p>Después de evaluar las opciones, decidimos hacer un control de Nintendo Switch. Al igual que los originales, está pensado para que se pueda jugar tanto por separado, con un control para cada jugador, como en conjunto, uniendo los dos para usarlos como un solo control. Elegimos esta idea porque combina electrónica, programación y diseño de una carcasa, además de que es un proyecto que nos emociona y que podemos usar una vez terminado.</p>
+            </div>
+
+            <!-- DIAGRAMAS EN ALTIUM -->
+            <div class="card">
+                <span class="badge">Diseño</span>
+                <h3>Diagramas en Altium Designer</h3>
+                <img src="diagrama-altium.jpg" alt="Diagrama esquemático en Altium Designer">
+                <p>Para empezar con el proyecto, realizamos los diagramas esquemáticos en Altium Designer. Ahí definimos todas las conexiones del control: los botones, el joystick y la alimentación, además de cómo se conectan al microcontrolador. Para la programación del control íbamos a ocupar una XIAO nRF52840, una placa pequeña que ya incluye Bluetooth, lo que la hace ideal para un control inalámbrico.</p>
+            </div>
+
+            <!-- DISEÑO DE LA PLACA -->
+            <div class="card">
+                <span class="badge">Diseño</span>
+                <h3>Diseño de la placa</h3>
+                <img src="diseno-placa-altium.jpg" alt="Diseño de la placa en Altium Designer">
+                <p>Una vez terminados los diagramas, empezamos a diseñar la placa, igualmente en Altium Designer. En esta etapa pasamos del esquema a la placa física: colocamos cada componente en su lugar, trazamos las pistas que los conectan y definimos la forma y el tamaño final de la placa para que cupiera dentro del control. Aquí es donde se decide cómo se va a ver y cómo va a funcionar el circuito en la realidad, por lo que es una de las partes más importantes del proyecto.</p>
+            </div>
+
+            <!-- JLCPCB: INTRO -->
+            <div class="card">
+                <span class="badge">Fabricación</span>
+                <h3>Pedido de la placa a JLCPCB</h3>
+                <p>En esta ocasión, en lugar de fabricar la placa nosotros, decidimos mandarla a fabricar a China, a la empresa JLCPCB, junto con otros compañeros. Pedirla en conjunto nos permitió hacer el pedido de manera más sencilla. A continuación mostramos los pasos que seguimos para hacer el pedido, uno por uno, para que cualquiera que quiera hacerlo pueda seguirlos.</p>
+            </div>
+
+            <!-- JLCPCB: PASO 1 -->
+            <div class="card">
+                <span class="badge">Paso 1</span>
+                <h3>Buscar la página de la empresa</h3>
+                <img src="jlcpcb-paso1.jpg" alt="Buscar la página de JLCPCB en internet">
+                <p>Lo primero es buscar en internet la página de JLCPCB. Es importante entrar al sitio oficial de la empresa para asegurarnos de que estamos haciendo el pedido en el lugar correcto y de forma segura.</p>
+            </div>
+
+            <!-- JLCPCB: PASO 2 -->
+            <div class="card">
+                <span class="badge">Paso 2</span>
+                <h3>Pulsar "Get Instant Quote"</h3>
+                <img src="jlcpcb-paso2.jpg" alt="Botón Get Instant Quote en la página principal">
+                <p>Una vez en la página principal, buscamos el botón "Get Instant Quote" y lo pulsamos. Este botón nos lleva a la sección donde podemos subir nuestros archivos y obtener una cotización de la placa al momento.</p>
+            </div>
+
+            <!-- JLCPCB: PASO 3 -->
+            <div class="card">
+                <span class="badge">Paso 3</span>
+                <h3>Subir los gerbers</h3>
+                <img src="jlcpcb-paso3.jpg" alt="Arrastrar la carpeta zip de los gerbers">
+                <p>En la página que se abre, arrastramos la carpeta zip con nuestros gerbers, que exportamos previamente desde Altium como ya mencionamos. Los gerbers son los archivos que contienen toda la información que la fábrica necesita para producir la placa, como las capas de cobre, las perforaciones y el contorno. Al subirlos, la página nos muestra una vista previa de la placa.</p>
+            </div>
+
+            <!-- JLCPCB: PASO 4 -->
+            <div class="card">
+                <span class="badge">Paso 4</span>
+                <h3>Seleccionar especificaciones y guardar en el carrito</h3>
+                <img src="jlcpcb-paso4.jpg" alt="Especificaciones de la placa y botón Save to cart">
+                <p>Después seleccionamos las especificaciones que queríamos para nuestra placa. Es importante mencionar que nosotros solamente pedimos la placa, sin ningún componente soldado, ya que íbamos a soldarlos nosotros mismos. Una vez elegidas las opciones, pulsamos "Save to cart" y después entramos al carrito para continuar con el pedido.</p>
+            </div>
+
+            <!-- JLCPCB: PASO 5 -->
+            <div class="card">
+                <span class="badge">Paso 5</span>
+                <h3>Realizar el pago</h3>
+                <img src="jlcpcb-paso5.jpg" alt="Proceso de pago en JLCPCB">
+                <p>Finalmente, realizamos todas las acciones de pago que nos requirió la página: confirmar los datos del pedido, ingresar la dirección de envío y completar el pago. Con esto el pedido quedó hecho y solo faltó esperar a que la placa fuera fabricada y enviada.</p>
+            </div>
+
+            <!-- PRUEBAS EN PROTOBOARD -->
+            <div class="card">
+                <span class="badge">Pruebas</span>
+                <h3>Pruebas de conexiones en protoboard</h3>
+                <img src="pruebas-protoboard.jpg" alt="Pruebas de conexiones en protoboard">
+                <p>Mientras esperábamos a que llegaran las placas, aprovechamos el tiempo para probar las conexiones en protoboard. Esto nos sirvió para comprobar que los botones y el joystick estaban conectados correctamente al microcontrolador y que el circuito funcionaba como lo habíamos planeado, antes de pasar a la placa definitiva.</p>
+            </div>
+
+            <!-- PROGRAMACIÓN -->
+            <div class="card">
+                <span class="badge">Pruebas</span>
+                <h3>Programación de la XIAO nRF52840</h3>
+                <img src="programacion-arduino-ide.jpg" alt="Código de la XIAO en Arduino IDE">
+                <p>Durante ese mismo tiempo también programamos el código de la XIAO mediante Arduino IDE. Con el circuito armado en el protoboard, pudimos cargar el código y probar que el control respondiera correctamente a cada botón y al joystick. Así, cuando llegaron las placas, ya teníamos buena parte del trabajo de programación adelantado.</p>
+            </div>
+
+            <!-- ERROR EN LA PLACA -->
+            <div class="card">
+                <span class="badge">Error</span>
+                <h3>Un error en las medidas de los componentes</h3>
+                <img src="error-medidas.jpg" alt="Componentes más pequeños de lo debido en la placa">
+                <p>Cuando llegaron las placas nos dimos cuenta de un error que cometi yo, Leonardo, quien ahora escribo esto para que este mismo error no les suceda y tambien recordarme a mi para que no me suceda nuevamente. En Altium no me fije correctamente en las medidas de algunos componentes, por lo que en las placas que llegaron las huellas eran más pequeñas de lo que debían ser. Esto generó un problema importante, ya que nosotros mismos íbamos a soldar los componentes y no cabían bien en los espacios que habíamos diseñado.</p>
+                <p><strong>Este error nos dejó una lección muy importante: hay que fijarnos bien en el tamaño de los componentes al diseñar la placa y verificar sus medidas reales antes de mandarla a fabricar.</strong></p>
+            </div>
+
+            <!-- SOLUCIÓN -->
+            <div class="card">
+                <span class="badge">Solución</span>
+                <h3>Cómo lo arreglamos</h3>
+                <img src="solucion-through-hole.jpg" alt="Componentes through-hole soldados en la placa">
+                <p>A pesar del error, logramos arreglárnoslas soldando componentes through-hole. Era lo más sencillo, ya que con este tipo de componentes podíamos poner las "patitas" de cada uno en el lugar que le correspondía, aunque las huellas no coincidieran perfectamente. Así pudimos aprovechar las placas que ya teníamos en lugar de mandar a fabricar unas nuevas.</p>
+            </div>
+
+            <!-- CARCASA -->
+            <div class="card">
+                <span class="badge">Carcasa</span>
+                <h3>Diseño e impresión de la carcasa</h3>
+                <img src="carcasa-solidworks.jpg" alt="Diseño de la carcasa en SolidWorks">
+                <p>Por otro lado, empezamos a diseñar en SolidWorks la carcasa de los controles. La carcasa es lo que le da forma al control y protege la placa y los componentes por dentro, además de que debe ser cómoda para sostenerla al jugar. Una vez terminado el diseño, lo vamos a imprimir en 3D en una Prusa.</p>
+            </div>
+        </section>
+
         <!-- ================= PESTAÑA: ACERCA DE ================= -->
         <section id="acerca" class="tab-content">
             <div class="card">
